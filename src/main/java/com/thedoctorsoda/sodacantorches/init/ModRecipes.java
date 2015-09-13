@@ -238,6 +238,11 @@ public class ModRecipes {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.bone_torch, 4), "c", "s", 'c', "torchFuel", 's', new ItemStack(Items.bone)));
 		}
 
+		// Golden Water Bucket
+		if (ConfigurationHandler.enableGoldenWaterBucket) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.golden_water_bucket), "gng", "gwg", "gwg", 'g', "ingotGold", 'n', new ItemStack(Items.nether_wart), 'w', new ItemStack(Items.water_bucket)));
+		}
+
 		// Unused Sticks
 		if (ConfigurationHandler.enableUnusedSticks) {
 			// Iron

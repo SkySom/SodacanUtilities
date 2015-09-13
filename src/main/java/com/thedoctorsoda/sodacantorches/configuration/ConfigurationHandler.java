@@ -45,6 +45,7 @@ public class ConfigurationHandler {
 	public static boolean enableNetherBrickFenceGate = true;
 	public static boolean enableNetherBrickFenceRecipeOverride = true;
 
+	public static boolean enableGoldenWaterBucket = true;
 	public static boolean enableUnusedSticks = false;
 
 	public static void init(File configFile) {
@@ -102,6 +103,9 @@ public class ConfigurationHandler {
 
 			// Unused Sticks
 			enableUnusedSticks = configuration.get(Configuration.CATEGORY_GENERAL, "enableUnusedSticks", false, "Enable Unused Sticks").getBoolean();
+
+			// Golden Water Bucket
+			enableGoldenWaterBucket = configuration.get(Configuration.CATEGORY_GENERAL, "enableGoldenWaterBucket", true, "Enable Golden Water Bucket").getBoolean();
 		} catch (Exception e) {
 
 		} finally {
