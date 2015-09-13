@@ -1,0 +1,8 @@
+Sodacan Swows-01.00.00 Changelog
+
+Added:
+	Wooden Swow
+	Golden Swow
+	Iron Swow
+	Golden Swow
+	Diamond Swow
