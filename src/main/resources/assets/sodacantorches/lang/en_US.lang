@@ -1,0 +1,55 @@
+#Item Localisation
+item.stick.name=Wooden Stick
+item.sodacantorches:stone_stick.name=Stone Stick
+item.sodacantorches:iron_stick.name=Iron Stick
+item.sodacantorches:gold_stick.name=Gold Stick
+item.sodacantorches:diamond_stick.name=Diamond Stick
+item.sodacantorches:obsidian_stick.name=Obsidian Stick
+item.sodacantorches:netherrack_stick.name=Netherrack Stick
+item.sodacantorches:quartz_stick.name=Quartz Stick
+
+item.sodacantorches:bronze_stick.name=Bronze Stick
+item.sodacantorches:steel_stick.name=Steel Stick
+
+#Block Localisation
+tile.torch.name=Wooden Torch
+tile.sodacantorches:stone_torch.name=Stone Torch
+tile.sodacantorches:quartz_torch.name=Quartz Torch
+tile.sodacantorches:obsidian_torch.name=Obsidian Torch
+tile.sodacantorches:netherrack_torch.name=Netherrack Torch
+tile.sodacantorches:blaze_torch.name=Blaze Torch
+tile.sodacantorches:bone_torch.name=Bone Torch
+tile.sodacantorches:bedrock_torch.name=Bedrock Torch (Invincible for Map Makers)
+
+tile.ladder.name=Wooden Ladder
+tile.sodacantorches:stone_ladder.name=Stone Ladder
+tile.sodacantorches:quartz_ladder.name=Quartz Ladder
+tile.sodacantorches:obsidian_ladder.name=Obsidian Ladder
+tile.sodacantorches:netherrack_ladder.name=Netherrack Ladder
+tile.sodacantorches:blaze_ladder.name=Blaze Ladder
+tile.sodacantorches:bedrock_ladder.name=Bedrock Ladder (Invincible for Map Makers)
+
+tile.sodacantorches:wood_lantern.name=Wooden Lantern
+tile.sodacantorches:stone_lantern.name=Stone Lantern
+tile.sodacantorches:obsidian_lantern.name=Obsidian Lantern
+tile.sodacantorches:netherrack_lantern.name=Netherrack Lantern
+tile.sodacantorches:quartz_lantern.name=Quartz Lantern
+tile.sodacantorches:blaze_lantern.name=Blaze Lantern
+tile.sodacantorches:bedrock_lantern.name=Bedrock Lantern (Invincible for Map Makers)
+
+tile.fence.name=Wooden Fence
+tile.sodacantorches:stone_fence.name=Stone Fence
+tile.sodacantorches:obsidian_fence.name=Obsidian Fence
+tile.sodacantorches:netherrack_fence.name=Netherrack Fence
+tile.sodacantorches:quartz_fence.name=Quartz Fence
+tile.sodacantorches:blaze_fence.name=Blaze Fence
+tile.sodacantorches:bedrock_fence.name=Bedrock Fence (Invincible for Map Makers)
+
+tile.fenceGate.name=Wooden Fence Gate
+tile.sodacantorches:stone_fence_gate.name=Stone Fence Gate
+tile.sodacantorches:obsidian_fence_gate.name=Obsidian Fence Gate
+tile.sodacantorches:netherrack_fence_gate.name=Netherrack Fence Gate
+tile.sodacantorches:quartz_fence_gate.name=Quartz Fence Gate
+tile.sodacantorches:blaze_fence_gate.name=Blaze Fence Gate
+tile.sodacantorches:bedrock_fence_gate.name=Bedrock Fence Gate (Invincible for Map Makers)
+tile.sodacantorches:netherbrick_fence_gate.name=Nether Brick Fence Gate
