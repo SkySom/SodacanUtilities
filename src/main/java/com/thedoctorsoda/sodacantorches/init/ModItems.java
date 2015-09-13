@@ -3,12 +3,14 @@ package com.thedoctorsoda.sodacantorches.init;
 import com.thedoctorsoda.sodacantorches.configuration.ConfigurationHandler;
 import com.thedoctorsoda.sodacantorches.items.ItemGoldenWaterBucket;
 import com.thedoctorsoda.sodacantorches.items.ItemStickTDS;
+import com.thedoctorsoda.sodacantorches.items.ItemWaterEraser;
 import com.thedoctorsoda.sodacantorches.reference.Names;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public final class ModItems {
 	public static final ItemGoldenWaterBucket golden_water_bucket = (ItemGoldenWaterBucket) new ItemGoldenWaterBucket().setUnlocalizedName(Names.GOLDENWATERBUCKET);
+	public static final ItemWaterEraser water_eraser = (ItemWaterEraser) new ItemWaterEraser().setUnlocalizedName(Names.WATERERASER);
 
 	public static final ItemStickTDS stone_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.STONESTICK);
 	public static final ItemStickTDS iron_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.IRONSTICK);
@@ -42,5 +44,6 @@ public final class ModItems {
 			GameRegistry.registerItem(steel_stick, Names.STEELSTICK);
 		}
 		GameRegistry.registerItem(golden_water_bucket, Names.GOLDENWATERBUCKET);
+		GameRegistry.registerItem(water_eraser, "water_eraser");
 	}
 }

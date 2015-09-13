@@ -241,6 +241,12 @@ public class ModRecipes {
 		// Golden Water Bucket
 		if (ConfigurationHandler.enableGoldenWaterBucket) {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.golden_water_bucket), "gng", "gwg", "gwg", 'g', "ingotGold", 'n', new ItemStack(Items.nether_wart), 'w', new ItemStack(Items.water_bucket)));
+
+		}
+
+		// Water Eraser
+		if (ConfigurationHandler.enableWaterEraser) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.water_eraser), " ww", "www", "ww ", 'w', new ItemStack(Blocks.wool, 1, 6)));
 		}
 
 		// Unused Sticks

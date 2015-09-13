@@ -46,6 +46,7 @@ public class ConfigurationHandler {
 	public static boolean enableNetherBrickFenceRecipeOverride = true;
 
 	public static boolean enableGoldenWaterBucket = true;
+	public static boolean enableWaterEraser = true;
 	public static boolean enableUnusedSticks = false;
 
 	public static void init(File configFile) {
@@ -106,6 +107,9 @@ public class ConfigurationHandler {
 
 			// Golden Water Bucket
 			enableGoldenWaterBucket = configuration.get(Configuration.CATEGORY_GENERAL, "enableGoldenWaterBucket", true, "Enable Golden Water Bucket").getBoolean();
+
+			// Water Eraser
+			enableWaterEraser = configuration.get(Configuration.CATEGORY_GENERAL, "enableWaterEraser", true, "Enable Water Eraser").getBoolean();
 		} catch (Exception e) {
 
 		} finally {

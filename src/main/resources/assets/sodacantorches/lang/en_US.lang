@@ -12,6 +12,7 @@ item.sodacantorches:bronze_stick.name=Bronze Stick
 item.sodacantorches:steel_stick.name=Steel Stick
 
 item.sodacantorches:golden_water_bucket.name=Golden Water Bucket
+item.sodacantorches:water_eraser.name=Water Eraser
 
 #Block Localisation
 tile.torch.name=Wooden Torch

@@ -3,9 +3,8 @@ package com.thedoctorsoda.sodacantorches.items;
 import com.thedoctorsoda.sodacantorches.reference.Names;
 import com.thedoctorsoda.sodacantorches.reference.Reference;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,13 +12,13 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemGoldenWaterBucket extends ItemTDS {
-	Block waterBlock = Blocks.flowing_water;
+public class ItemWaterEraser extends ItemTDS {
+	Block airBlock = Blocks.air;
 
-	public ItemGoldenWaterBucket() {
+	public ItemWaterEraser() {
 		super();
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(Reference.MOD_ID + ":" + Names.GOLDENWATERBUCKET);
+		this.setTextureName(Reference.MOD_ID + ":" + Names.WATERERASER);
 	}
 
 	@Override
@@ -52,28 +51,24 @@ public class ItemGoldenWaterBucket extends ItemTDS {
 				++x;
 			}
 		}
+		if (world.getBlock(x, y, z).getMaterial() == Material.water || world.getBlock(x, y, z).getMaterial() == Material.lava) {
+			if (!player.canPlayerEdit(x, y, z, p_77648_7_, stack)) {
+				return false;
+			} else if (stack.stackSize == 0) {
+				return false;
+			} else {
+				if (world.canPlaceEntityOnSide(this.airBlock, x, y, z, false, p_77648_7_, (Entity) null, stack)) {
+					int i1 = this.airBlock.onBlockPlaced(world, x, y, z, p_77648_7_, p_77648_8_, p_77648_9_, p_77648_10_, 0);
 
-		if (!player.canPlayerEdit(x, y, z, p_77648_7_, stack)) {
-			return false;
-		} else if (stack.stackSize == 0) {
-			return false;
-		} else {
-			if (world.canPlaceEntityOnSide(this.waterBlock, x, y, z, false, p_77648_7_, (Entity) null, stack)) {
-				int i1 = this.waterBlock.onBlockPlaced(world, x, y, z, p_77648_7_, p_77648_8_, p_77648_9_, p_77648_10_, 0);
-
-				if (world.setBlock(x, y, z, this.waterBlock, i1, 3)) {
-					if (world.getBlock(x, y, z) == this.waterBlock) {
-						this.waterBlock.onBlockPlacedBy(world, x, y, y, player, stack);
-						this.waterBlock.onPostBlockPlaced(world, x, y, y, i1);
+					if (world.setBlock(x, y, z, this.airBlock, i1, 3)) {
+						if (world.getBlock(x, y, z) == this.airBlock) {
+							this.airBlock.onBlockPlacedBy(world, x, y, y, player, stack);
+							this.airBlock.onPostBlockPlaced(world, x, y, y, i1);
+						}
 					}
 				}
 			}
-			return true;
 		}
-	}
-
-	@SideOnly(Side.CLIENT)
-	public boolean hasEffect(ItemStack p_77636_1_) {
 		return true;
 	}
 }
