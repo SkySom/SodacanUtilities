@@ -1,20 +1,15 @@
-Sodacan Torches-01.06.00 Changelog
+Sodacan Torches-01.07.00 Changelog
 
-=======================================================
-Sodacan Torches 1.6 - The Lantern Update! (and fences!)
-=======================================================
+========================================
+Sodacan Torches 1.7 - The Utility Update
+========================================
 
 Additions:
-	Wooden, Stone, Netherrack, Obsidian, Quartz, and Blaze Lanterns.
-	Stone, Netherrack, Obsidian, Quartz, and Blaze Fences.
-	Stone, Netherrack, Obsidian, Quartz, Blaze, and Nether Brick Fence Gates.
-	
+	Added the Golden Water Bucket
+	Added the Water Eraser
+
 Removals:
-	WIP uncraftable camo lantern.
+	
 
 Tweaks:
-	Changed the overridden wooden ladder texture.
-	Changed the blaze torch and ladder texture.
-	Quartz Torch now yields 8 rather than 4.
-	Bone Torch is disabled by default (because it's really ugly and useless).
-	Added an alternative (slightly cheaper) nether brick fence recipe.
+	
