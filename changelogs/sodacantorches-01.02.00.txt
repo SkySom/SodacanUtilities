@@ -1,0 +1,11 @@
+Sodacan Torches-01.02.00 Changelog
+
+Added:
+	Added iron, gold, and diamond sticks (currently have no use)
+	Added bronze and steel sticks if my (not so) upcoming mod is loaded.
+	Vanilla Minecraft stick now has a new texture and is named "Wooden Stick" instead of "Stick"
+
+Changes:
+	Added materialRod and rodMaterial as Ore Dictionary entries for the sticks
+	Changed unlocalised names to a new format (MAY DELETE TORCHES/STICKS IN CURRENT WORLDS)
+	Changed how the items and blocks are registered behind the scenes.

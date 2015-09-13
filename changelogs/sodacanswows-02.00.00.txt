@@ -1,0 +1,3 @@
+Sodacan Swows-02.00.00 Changelog
+
+Rewrote for minecraft 1.8

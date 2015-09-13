@@ -1,0 +1,7 @@
+Sodacan Torches-01.03.00 Changelog
+Added:
+	Quartz Torch
+	Quartz Stick
+
+Changes:
+	Overrode Vanilla Torches

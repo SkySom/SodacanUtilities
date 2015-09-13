@@ -1,0 +1,5 @@
+Sodacan Torches-01.01.02 Changelog
+
+Bugfixes:
+	Blaze torch and Bone torch had their light levels swapped
+	Bedrock torch was NOT unbreakable and had very low light level

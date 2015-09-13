@@ -1,0 +1,9 @@
+Sodacan Torches-01.00.00 Changelog
+
+Added:
+	Stone Torches
+	Stone Sticks
+	Obsidian Torches
+	Obsidian Sticks
+	Netherrack Torches
+	Netherrack Sticks

@@ -1,0 +1,9 @@
+Sodacan Torches-01.01.00 Changelog
+
+Added:
+	Blaze Torches
+	Bone Torches
+
+Changed:
+	Torches that are crafted with coal can now also be crafted with charcoal
+	More information on the new features can be found on the main page under features.

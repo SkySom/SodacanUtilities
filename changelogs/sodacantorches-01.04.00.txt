@@ -1,0 +1,16 @@
+Sodacan Torches-01.04.00 Changelog
+
+==============================================
+Sodacan Torches 1.4 - The Configuration Update
+==============================================
+
+Additions:
+	Config File
+	Default Configurations (as of 01.04.00)
+	Spoiler (click to show)
+ 
+Removals:
+	None
+
+Tweaks:
+	Unused sticks are disabled by default

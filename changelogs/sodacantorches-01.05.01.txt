@@ -1,0 +1,15 @@
+Sodacan Torches-01.05.01 Changelog
+
+==============================================
+Sodacan Torches 1.5 - The Ladder Update
+==============================================
+
+Additions:
+	WIP lantern -- uncraftable at the moment
+
+Removals:
+	None	
+
+Tweaks:
+	Tools can be crafted with any kind of stick
+	Fixed [ST-001]

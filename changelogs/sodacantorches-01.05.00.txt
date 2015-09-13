@@ -1,0 +1,20 @@
+Sodacan Torches-01.05.00 Changelog
+
+==============================================
+Sodacan Torches 1.5 - The Ladder Update
+==============================================
+
+Notes: MAKE SURE TO DELETE YOUR OLD CONFIGURATION FILE BEFORE LAUNCHING THIS VERSION!
+
+Additions:
+	Stone, Netherrack, Blaze, Obsidian, Quartz, and Bedrock Ladders!
+	Ladders differ in speed based on material
+	Obsidian ladders are blast resistant.
+	Bedrock ladders are unbreakable.
+	Some textures slightly changed
+
+Removals:
+	None	
+
+Tweaks:
+	Texture Override disabled by default

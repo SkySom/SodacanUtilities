@@ -1,0 +1,4 @@
+Sodacan Torches-01.01.00 Changelog
+
+Bugfixes:
+	Bedrock torch code was replaced with obsidian torch code, resulting in two obsidian torches and no bedrock torch
