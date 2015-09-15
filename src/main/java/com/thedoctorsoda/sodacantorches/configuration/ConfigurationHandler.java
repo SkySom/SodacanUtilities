@@ -5,6 +5,14 @@ import java.io.File;
 import net.minecraftforge.common.config.Configuration;
 
 public class ConfigurationHandler {
+	public static int configVersion = 1;
+	/*
+	 * Config Versions:
+	 * 
+	 * 1 = 01.07.00
+	 * 
+	 */
+
 	public static boolean overrideVanillaTextures = false;
 	public static boolean enableTorches = true;
 	public static boolean enableLadders = true;
@@ -25,6 +33,10 @@ public class ConfigurationHandler {
 	public static boolean enableQuartzLadder = true;
 	public static boolean enableBedrockLadder = true;
 	public static boolean enableBlazeLadder = true;
+
+	public static double obsidianLadderSpeed = 0.06F;
+	public static double quartzLadderSpeed = 0.06F;
+	public static double blazeLadderSpeed = 0.1F;
 
 	public static boolean enableWoodLantern = true;
 	public static boolean enableStoneLantern = true;
@@ -55,6 +67,8 @@ public class ConfigurationHandler {
 		try {
 			configuration.load();
 
+			configVersion = configuration.get(Configuration.CATEGORY_GENERAL, "configVersion", true, "Config File Version [DO NOT CHANGE!]").getInt();
+
 			// Vanilla Textures Override
 			overrideVanillaTextures = configuration.get(Configuration.CATEGORY_GENERAL, "overrideVanillaTextures", false, "Enable Vanilla Override Textures").getBoolean();
 
@@ -78,6 +92,10 @@ public class ConfigurationHandler {
 			enableQuartzLadder = configuration.get(Configuration.CATEGORY_GENERAL, "enableQuartzLadder", true, "Enable Quartz Ladder").getBoolean();
 			enableBedrockLadder = configuration.get(Configuration.CATEGORY_GENERAL, "enableBedrockLadder", true, "Enable Bedrock Ladder").getBoolean();
 			enableBlazeLadder = configuration.get(Configuration.CATEGORY_GENERAL, "enableBlazeLadder", true, "Enable Blaze Ladder").getBoolean();
+
+			obsidianLadderSpeed = configuration.get(Configuration.CATEGORY_GENERAL, "obsidianLadderSpeed", 0.06, "Obsidian Ladder Speed").getDouble();
+			quartzLadderSpeed = configuration.get(Configuration.CATEGORY_GENERAL, "quartzLadderSpeed", 0.06, "Quartz Ladder Speed").getDouble();
+			blazeLadderSpeed = configuration.get(Configuration.CATEGORY_GENERAL, "blazeLadderSpeed", 0.1, "Blaze Ladder Speed").getDouble();
 
 			// Lanterns
 			enableLanterns = configuration.get(Configuration.CATEGORY_GENERAL, "enableLanterns", true, "Enable Lanterns").getBoolean();

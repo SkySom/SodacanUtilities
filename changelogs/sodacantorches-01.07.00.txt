@@ -7,9 +7,12 @@ Sodacan Torches 1.7 - The Utility Update
 Additions:
 	Added the Golden Water Bucket
 	Added the Water Eraser
+	Added a configVersion variable in the configs. This is so that Sodacan Torches can detect when the config file was generated. Every version of sodacan torches this value will go up by 1.
 
 Removals:
 	
 
 Tweaks:
-	
+	Blaze, Obsidian, and Quartz ladder speeds are configurable
+	Blaze, Obsidian, and Quartz ladder speeds doubled by default
+	All ladders now use 2 classes, rather than 4

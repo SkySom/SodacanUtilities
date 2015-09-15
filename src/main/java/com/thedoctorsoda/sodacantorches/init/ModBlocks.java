@@ -1,12 +1,10 @@
 package com.thedoctorsoda.sodacantorches.init;
 
-import com.thedoctorsoda.sodacantorches.blocks.BlockBlazeLadder;
+import com.thedoctorsoda.sodacantorches.blocks.BlockDefaultLadderTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockFenceGateTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockFenceTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockLadderTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockLanternTDS;
-import com.thedoctorsoda.sodacantorches.blocks.BlockObsidianLadder;
-import com.thedoctorsoda.sodacantorches.blocks.BlockQuartzLadder;
 import com.thedoctorsoda.sodacantorches.blocks.BlockTorchTDS;
 import com.thedoctorsoda.sodacantorches.configuration.ConfigurationHandler;
 import com.thedoctorsoda.sodacantorches.reference.Names;
@@ -25,12 +23,12 @@ public final class ModBlocks {
 	public static final BlockTorchTDS blaze_torch = (BlockTorchTDS) new BlockTorchTDS().setBlockName(Reference.MOD_ID + ":" + Names.BLAZETORCH).setLightLevel(1F).setBlockTextureName(Reference.MOD_ID + ":" + Names.BLAZETORCH);
 	public static final BlockTorchTDS bone_torch = (BlockTorchTDS) new BlockTorchTDS().setBlockName(Reference.MOD_ID + ":" + Names.BONETORCH).setLightLevel(0.5F).setBlockTextureName(Reference.MOD_ID + ":" + Names.BONETORCH);
 
-	public static final BlockLadderTDS stone_ladder = (BlockLadderTDS) new BlockLadderTDS().setBlockName(Reference.MOD_ID + ":" + Names.STONELADDER).setHardness(0.4F).setBlockTextureName(Reference.MOD_ID + ":" + Names.STONELADDER);
-	public static final BlockObsidianLadder obsidian_ladder = (BlockObsidianLadder) new BlockObsidianLadder().setBlockName(Reference.MOD_ID + ":" + Names.OBSIDIANLADDER).setHardness(5F).setResistance(6000F).setBlockTextureName(Reference.MOD_ID + ":" + Names.OBSIDIANLADDER);
-	public static final BlockLadderTDS netherrack_ladder = (BlockLadderTDS) new BlockLadderTDS().setBlockName(Reference.MOD_ID + ":" + Names.NETHERRACKLADDER).setHardness(0.4F).setBlockTextureName(Reference.MOD_ID + ":" + Names.NETHERRACKLADDER);
-	public static final BlockBlazeLadder blaze_ladder = (BlockBlazeLadder) new BlockBlazeLadder().setBlockName(Reference.MOD_ID + ":" + Names.BLAZELADDER).setHardness(0.4F).setBlockTextureName(Reference.MOD_ID + ":" + Names.BLAZELADDER);
-	public static final BlockQuartzLadder quartz_ladder = (BlockQuartzLadder) new BlockQuartzLadder().setBlockName(Reference.MOD_ID + ":" + Names.QUARTZLADDER).setHardness(0.4F).setBlockTextureName(Reference.MOD_ID + ":" + Names.QUARTZLADDER);
-	public static final BlockLadderTDS bedrock_ladder = (BlockLadderTDS) new BlockLadderTDS().setBlockName(Reference.MOD_ID + ":" + Names.BEDROCKLADDER).setResistance(18000000F).setHardness(-1F).setBlockTextureName(Reference.MOD_ID + ":" + Names.BEDROCKLADDER);
+	public static final BlockDefaultLadderTDS stone_ladder = (BlockDefaultLadderTDS) new BlockDefaultLadderTDS().setBlockName(Reference.MOD_ID + ":" + Names.STONELADDER).setHardness(0.4F).setBlockTextureName(Reference.MOD_ID + ":" + Names.STONELADDER);
+	public static final BlockLadderTDS obsidian_ladder = (BlockLadderTDS) new BlockLadderTDS(0.06F).setBlockName(Reference.MOD_ID + ":" + Names.OBSIDIANLADDER).setHardness(5F).setResistance(6000F).setBlockTextureName(Reference.MOD_ID + ":" + Names.OBSIDIANLADDER);
+	public static final BlockDefaultLadderTDS netherrack_ladder = (BlockDefaultLadderTDS) new BlockDefaultLadderTDS().setBlockName(Reference.MOD_ID + ":" + Names.NETHERRACKLADDER).setHardness(0.4F).setBlockTextureName(Reference.MOD_ID + ":" + Names.NETHERRACKLADDER);
+	public static final BlockLadderTDS blaze_ladder = (BlockLadderTDS) new BlockLadderTDS(0.1F).setBlockName(Reference.MOD_ID + ":" + Names.BLAZELADDER).setHardness(0.4F).setBlockTextureName(Reference.MOD_ID + ":" + Names.BLAZELADDER);
+	public static final BlockLadderTDS quartz_ladder = (BlockLadderTDS) new BlockLadderTDS(0.06F).setBlockName(Reference.MOD_ID + ":" + Names.QUARTZLADDER).setHardness(0.4F).setBlockTextureName(Reference.MOD_ID + ":" + Names.QUARTZLADDER);
+	public static final BlockDefaultLadderTDS bedrock_ladder = (BlockDefaultLadderTDS) new BlockDefaultLadderTDS().setBlockName(Reference.MOD_ID + ":" + Names.BEDROCKLADDER).setResistance(18000000F).setHardness(-1F).setBlockTextureName(Reference.MOD_ID + ":" + Names.BEDROCKLADDER);
 
 	public static final BlockLanternTDS wood_lantern = (BlockLanternTDS) new BlockLanternTDS(Reference.MOD_ID + ":" + Names.WOODLANTERN).setBlockName(Names.WOODLANTERN).setResistance(13).setLightLevel(1F).setHardness(3);
 	public static final BlockLanternTDS stone_lantern = (BlockLanternTDS) new BlockLanternTDS(Reference.MOD_ID + ":" + Names.STONELANTERN).setBlockName(Names.STONELANTERN).setResistance(13).setLightLevel(1F).setHardness(3);
