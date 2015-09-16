@@ -5,6 +5,7 @@ import com.thedoctorsoda.sodacantorches.blocks.BlockFenceGateTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockFenceTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockLadderTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockLanternTDS;
+import com.thedoctorsoda.sodacantorches.blocks.BlockLeverTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockTorchTDS;
 import com.thedoctorsoda.sodacantorches.configuration.ConfigurationHandler;
 import com.thedoctorsoda.sodacantorches.reference.Names;
@@ -22,6 +23,13 @@ public final class ModBlocks {
 	public static final BlockTorchTDS bedrock_torch = (BlockTorchTDS) new BlockTorchTDS().setBlockName(Reference.MOD_ID + ":" + Names.BEDROCKTORCH).setResistance(18000000F).setLightLevel(1F).setHardness(-1F).setBlockTextureName(Reference.MOD_ID + ":" + Names.BEDROCKTORCH);
 	public static final BlockTorchTDS blaze_torch = (BlockTorchTDS) new BlockTorchTDS().setBlockName(Reference.MOD_ID + ":" + Names.BLAZETORCH).setLightLevel(1F).setBlockTextureName(Reference.MOD_ID + ":" + Names.BLAZETORCH);
 	public static final BlockTorchTDS bone_torch = (BlockTorchTDS) new BlockTorchTDS().setBlockName(Reference.MOD_ID + ":" + Names.BONETORCH).setLightLevel(0.5F).setBlockTextureName(Reference.MOD_ID + ":" + Names.BONETORCH);
+
+	public static final BlockLeverTDS stone_lever = (BlockLeverTDS) new BlockLeverTDS().setBlockName(Reference.MOD_ID + ":" + Names.STONELEVER).setLightLevel(0.9375F).setBlockTextureName(Reference.MOD_ID + ":" + Names.STONELEVER);
+	public static final BlockLeverTDS obsidian_lever = (BlockLeverTDS) new BlockLeverTDS().setBlockName(Reference.MOD_ID + ":" + Names.OBSIDIANLEVER).setLightLevel(0.9375F).setResistance(6000F).setHardness(5F).setBlockTextureName(Reference.MOD_ID + ":" + Names.OBSIDIANLEVER);
+	public static final BlockLeverTDS netherrack_lever = (BlockLeverTDS) new BlockLeverTDS().setBlockName(Reference.MOD_ID + ":" + Names.NETHERRACKLEVER).setLightLevel(0.9375F).setBlockTextureName(Reference.MOD_ID + ":" + Names.NETHERRACKLEVER);
+	public static final BlockLeverTDS quartz_lever = (BlockLeverTDS) new BlockLeverTDS().setBlockName(Reference.MOD_ID + ":" + Names.QUARTZLEVER).setLightLevel(0.9375F).setBlockTextureName(Reference.MOD_ID + ":" + Names.QUARTZLEVER);
+	public static final BlockLeverTDS bedrock_lever = (BlockLeverTDS) new BlockLeverTDS().setBlockName(Reference.MOD_ID + ":" + Names.BEDROCKLEVER).setResistance(18000000F).setLightLevel(1F).setHardness(-1F).setBlockTextureName(Reference.MOD_ID + ":" + Names.BEDROCKLEVER);
+	public static final BlockLeverTDS blaze_lever = (BlockLeverTDS) new BlockLeverTDS().setBlockName(Reference.MOD_ID + ":" + Names.BLAZELEVER).setLightLevel(1F).setBlockTextureName(Reference.MOD_ID + ":" + Names.BLAZELEVER);
 
 	public static final BlockDefaultLadderTDS stone_ladder = (BlockDefaultLadderTDS) new BlockDefaultLadderTDS().setBlockName(Reference.MOD_ID + ":" + Names.STONELADDER).setHardness(0.4F).setBlockTextureName(Reference.MOD_ID + ":" + Names.STONELADDER);
 	public static final BlockLadderTDS obsidian_ladder = (BlockLadderTDS) new BlockLadderTDS(0.06F).setBlockName(Reference.MOD_ID + ":" + Names.OBSIDIANLADDER).setHardness(5F).setResistance(6000F).setBlockTextureName(Reference.MOD_ID + ":" + Names.OBSIDIANLADDER);
@@ -48,7 +56,7 @@ public final class ModBlocks {
 	public static final BlockFenceGateTDS stone_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(Blocks.stone).setBlockName(Names.STONEFENCEGATE).setResistance(13).setHardness(3);
 	public static final BlockFenceGateTDS obsidian_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(Blocks.obsidian).setBlockName(Names.OBSIDIANFENCEGATE).setResistance(6000F).setHardness(5F);
 	public static final BlockFenceGateTDS netherrack_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(Blocks.netherrack).setBlockName(Names.NETHERRACKFENCEGATE).setResistance(13).setHardness(3);
-	public static final BlockFenceGateTDS quartz_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(Blocks.quartz_stairs).setBlockName(Names.QUARTZFENCEGATE).setResistance(13).setHardness(3);
+	public static final BlockFenceGateTDS quartz_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(ModBlocks.quartz_fence).setBlockName(Names.QUARTZFENCEGATE).setResistance(13).setHardness(3);
 	public static final BlockFenceGateTDS blaze_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(ModBlocks.blaze_fence).setBlockName(Names.BLAZEFENCEGATE).setResistance(13).setHardness(3);
 	public static final BlockFenceGateTDS bedrock_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(Blocks.bedrock).setBlockName(Names.BEDROCKFENCEGATE).setResistance(18000000F).setHardness(-1);
 
@@ -99,6 +107,28 @@ public final class ModBlocks {
 			}
 			if (ConfigurationHandler.enableBlazeLadder) {
 				GameRegistry.registerBlock(blaze_ladder, Names.BLAZELADDER);
+			}
+		}
+
+		// Levers
+		if (ConfigurationHandler.enableLevers) {
+			if (ConfigurationHandler.enableStoneLever) {
+				GameRegistry.registerBlock(stone_lever, Names.STONELEVER);
+			}
+			if (ConfigurationHandler.enableObsidianLever) {
+				GameRegistry.registerBlock(obsidian_lever, Names.OBSIDIANLEVER);
+			}
+			if (ConfigurationHandler.enableNetherrackLever) {
+				GameRegistry.registerBlock(netherrack_lever, Names.NETHERRACKLEVER);
+			}
+			if (ConfigurationHandler.enableQuartzLever) {
+				GameRegistry.registerBlock(quartz_lever, Names.QUARTZLEVER);
+			}
+			if (ConfigurationHandler.enableBedrockLever) {
+				GameRegistry.registerBlock(bedrock_lever, Names.BEDROCKLEVER);
+			}
+			if (ConfigurationHandler.enableBlazeLever) {
+				GameRegistry.registerBlock(blaze_lever, Names.BLAZELEVER);
 			}
 		}
 

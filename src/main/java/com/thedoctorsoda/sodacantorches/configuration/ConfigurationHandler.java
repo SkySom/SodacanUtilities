@@ -15,6 +15,7 @@ public class ConfigurationHandler {
 
 	public static boolean overrideVanillaTextures = false;
 	public static boolean enableTorches = true;
+	public static boolean enableLevers = true;
 	public static boolean enableLadders = true;
 	public static boolean enableLanterns = true;
 	public static boolean enableFences = true;
@@ -26,6 +27,14 @@ public class ConfigurationHandler {
 	public static boolean enableBedrockTorch = true;
 	public static boolean enableBlazeTorch = true;
 	public static boolean enableBoneTorch = true;
+
+	public static boolean enableStoneLever = true;
+	public static boolean enableObsidianLever = true;
+	public static boolean enableNetherrackLever = true;
+	public static boolean enableQuartzLever = true;
+	public static boolean enableBedrockLever = true;
+	public static boolean enableBlazeLever = true;
+	public static boolean enableBoneLever = true;
 
 	public static boolean enableStoneLadder = true;
 	public static boolean enableObsidianLadder = true;
@@ -82,6 +91,16 @@ public class ConfigurationHandler {
 			enableBedrockTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableBedrockTorch", true, "Enable Bedrock Torch").getBoolean();
 			enableBlazeTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableBlazeTorch", true, "Enable Blaze Torch").getBoolean();
 			enableBoneTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableBoneTorch", false, "Enable Bone Torch").getBoolean();
+
+			// Levers
+			enableLevers = configuration.get(Configuration.CATEGORY_GENERAL, "enableLevers", true, "Enable Levers").getBoolean();
+
+			enableStoneLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableStoneLever", true, "Enable Stone Lever").getBoolean();
+			enableObsidianLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableObsidianLever", true, "Enable Obsidian Lever").getBoolean();
+			enableNetherrackLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherrackLever", true, "Enable Netherrack Lever").getBoolean();
+			enableQuartzLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableQuartzLever", true, "Enable Quartz Lever").getBoolean();
+			enableBedrockLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableBedrockLever", true, "Enable Bedrock Lever").getBoolean();
+			enableBlazeLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableBlazeLever", true, "Enable Blaze Lever").getBoolean();
 
 			// Ladders
 			enableLadders = configuration.get(Configuration.CATEGORY_GENERAL, "enableLadders", true, "Enable Ladders").getBoolean();

@@ -28,6 +28,7 @@ public class Names {
 	public static final String NETHERBRICKFENCEGATE = "netherbrick_fence_gate";
 
 	public static final String STONETORCH = "stone_torch";
+	public static final String STONELEVER = "stone_lever";
 	public static final String STONELADDER = "stone_ladder";
 	public static final String STONESTICK = "stone_stick";
 
@@ -42,21 +43,26 @@ public class Names {
 	public static final String DIAMONDSTICK = "diamond_stick";
 
 	public static final String OBSIDIANTORCH = "obsidian_torch";
+	public static final String OBSIDIANLEVER = "obsidian_lever";
 	public static final String OBSIDIANLADDER = "obsidian_ladder";
 	public static final String OBSIDIANSTICK = "obsidian_stick";
 
 	public static final String NETHERRACKTORCH = "netherrack_torch";
+	public static final String NETHERRACKLEVER = "netherrack_lever";
 	public static final String NETHERRACKLADDER = "netherrack_ladder";
 	public static final String NETHERRACKSTICK = "netherrack_stick";
 
 	public static final String QUARTZSTICK = "quartz_stick";
+	public static final String QUARTZLEVER = "quartz_lever";
 	public static final String QUARTZTORCH = "quartz_torch";
 	public static final String QUARTZLADDER = "quartz_ladder";
 
 	public static final String BEDROCKTORCH = "bedrock_torch";
+	public static final String BEDROCKLEVER = "bedrock_lever";
 	public static final String BEDROCKLADDER = "bedrock_ladder";
 
 	public static final String BLAZETORCH = "blaze_torch";
+	public static final String BLAZELEVER = "blaze_lever";
 	public static final String BLAZELADDER = "blaze_ladder";
 
 	public static final String BONETORCH = "bone_torch";
