@@ -8,10 +8,13 @@ public class Names {
 	public static final String STONELANTERN = "stone_lantern";
 	public static final String OBSIDIANLANTERN = "obsidian_lantern";
 	public static final String NETHERRACKLANTERN = "netherrack_lantern";
+	public static final String NETHERBRICKLANTERN = "netherbrick_lantern";
 	public static final String QUARTZLANTERN = "quartz_lantern";
 	public static final String BLAZELANTERN = "blaze_lantern";
 	public static final String BEDROCKLANTERN = "bedrock_lantern";
 
+	public static final String WOODFENCE = "wood_fence";
+	public static final String NETHERBRICKFENCE = "netherbrick_fence";
 	public static final String STONEFENCE = "stone_fence";
 	public static final String OBSIDIANFENCE = "obsidian_fence";
 	public static final String NETHERRACKFENCE = "netherrack_fence";
@@ -51,6 +54,11 @@ public class Names {
 	public static final String NETHERRACKLEVER = "netherrack_lever";
 	public static final String NETHERRACKLADDER = "netherrack_ladder";
 	public static final String NETHERRACKSTICK = "netherrack_stick";
+
+	public static final String NETHERBRICKTORCH = "netherbrick_torch";
+	public static final String NETHERBRICKLEVER = "netherbrick_lever";
+	public static final String NETHERBRICKLADDER = "netherbrick_ladder";
+	public static final String NETHERBRICKSTICK = "netherbrick_stick";
 
 	public static final String QUARTZSTICK = "quartz_stick";
 	public static final String QUARTZLEVER = "quartz_lever";

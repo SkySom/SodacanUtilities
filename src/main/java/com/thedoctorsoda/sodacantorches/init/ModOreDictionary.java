@@ -39,32 +39,10 @@ public class ModOreDictionary {
 		if (ConfigurationHandler.enableQuartzLadder || ConfigurationHandler.enableQuartzTorch) {
 			OreDictionary.registerOre("stickAll", ModItems.quartz_stick);
 		}
-		if (ConfigurationHandler.enableUnusedSticks) {
-			OreDictionary.registerOre("stickAll", ModItems.iron_stick);
-			OreDictionary.registerOre("stickAll", ModItems.gold_stick);
-			OreDictionary.registerOre("stickAll", ModItems.diamond_stick);
-			OreDictionary.registerOre("stickAll", ModItems.bronze_stick);
-			OreDictionary.registerOre("stickAll", ModItems.steel_stick);
-		}
 
 		OreDictionary.registerOre("stickStone", ModItems.stone_stick);
 		OreDictionary.registerOre("rodStone", ModItems.stone_stick);
 		OreDictionary.registerOre("stoneRod", ModItems.stone_stick);
-
-		OreDictionary.registerOre("stickIron", ModItems.iron_stick);
-		OreDictionary.registerOre("rodIron", ModItems.iron_stick);
-		OreDictionary.registerOre("ironRod", ModItems.iron_stick);
-
-		OreDictionary.registerOre("stickGold", ModItems.gold_stick);
-		OreDictionary.registerOre("rodGold", ModItems.gold_stick);
-		OreDictionary.registerOre("goldRod", ModItems.gold_stick);
-		OreDictionary.registerOre("stickGolden", ModItems.gold_stick);
-		OreDictionary.registerOre("rodGolden", ModItems.gold_stick);
-		OreDictionary.registerOre("goldenRod", ModItems.gold_stick);
-
-		OreDictionary.registerOre("stickDiamond", ModItems.diamond_stick);
-		OreDictionary.registerOre("rodDiamond", ModItems.diamond_stick);
-		OreDictionary.registerOre("diamondRod", ModItems.diamond_stick);
 
 		OreDictionary.registerOre("stickObsidian", ModItems.obsidian_stick);
 		OreDictionary.registerOre("rodObsidian", ModItems.obsidian_stick);
@@ -74,17 +52,13 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("rodNetherrack", ModItems.netherrack_stick);
 		OreDictionary.registerOre("netherrackRod", ModItems.netherrack_stick);
 
+		OreDictionary.registerOre("stickNetherbrick", ModItems.netherbrick_stick);
+		OreDictionary.registerOre("rodNetherbrick", ModItems.netherbrick_stick);
+		OreDictionary.registerOre("netherbrickRod", ModItems.netherbrick_stick);
+
 		OreDictionary.registerOre("stickQuartz", ModItems.quartz_stick);
 		OreDictionary.registerOre("rodQuartz", ModItems.quartz_stick);
 		OreDictionary.registerOre("quartzRod", ModItems.quartz_stick);
-
-		OreDictionary.registerOre("stickBronze", ModItems.bronze_stick);
-		OreDictionary.registerOre("rodBronze", ModItems.bronze_stick);
-		OreDictionary.registerOre("bronzeRod", ModItems.bronze_stick);
-
-		OreDictionary.registerOre("stickSteel", ModItems.steel_stick);
-		OreDictionary.registerOre("rodSteel", ModItems.steel_stick);
-		OreDictionary.registerOre("steelRod", ModItems.steel_stick);
 
 		OreDictionary.registerOre("stickBlaze", Items.blaze_rod);
 		OreDictionary.registerOre("rodBlaze", Items.blaze_rod);

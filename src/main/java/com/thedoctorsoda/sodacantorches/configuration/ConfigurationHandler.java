@@ -2,6 +2,8 @@ package com.thedoctorsoda.sodacantorches.configuration;
 
 import java.io.File;
 
+import com.thedoctorsoda.sodacantorches.init.ModVariables;
+
 import net.minecraftforge.common.config.Configuration;
 
 public class ConfigurationHandler {
@@ -13,7 +15,6 @@ public class ConfigurationHandler {
 	 * 
 	 */
 
-	public static boolean overrideVanillaTextures = false;
 	public static boolean enableTorches = true;
 	public static boolean enableLevers = true;
 	public static boolean enableLadders = true;
@@ -26,7 +27,8 @@ public class ConfigurationHandler {
 	public static boolean enableQuartzTorch = true;
 	public static boolean enableBedrockTorch = true;
 	public static boolean enableBlazeTorch = true;
-	public static boolean enableBoneTorch = true;
+	public static boolean enableBoneTorch = false;
+	public static boolean enableNetherbrickTorch = true;
 
 	public static boolean enableStoneLever = true;
 	public static boolean enableObsidianLever = true;
@@ -34,7 +36,7 @@ public class ConfigurationHandler {
 	public static boolean enableQuartzLever = true;
 	public static boolean enableBedrockLever = true;
 	public static boolean enableBlazeLever = true;
-	public static boolean enableBoneLever = true;
+	public static boolean enableNetherbrickLever = true;
 
 	public static boolean enableStoneLadder = true;
 	public static boolean enableObsidianLadder = true;
@@ -42,6 +44,7 @@ public class ConfigurationHandler {
 	public static boolean enableQuartzLadder = true;
 	public static boolean enableBedrockLadder = true;
 	public static boolean enableBlazeLadder = true;
+	public static boolean enableNetherbrickLadder = true;
 
 	public static double obsidianLadderSpeed = 0.06F;
 	public static double quartzLadderSpeed = 0.06F;
@@ -54,6 +57,7 @@ public class ConfigurationHandler {
 	public static boolean enableQuartzLantern = true;
 	public static boolean enableBlazeLantern = true;
 	public static boolean enableBedrockLantern = true;
+	public static boolean enableNetherbrickLantern = true;
 
 	public static boolean enableWoodFence = true;
 	public static boolean enableStoneFence = true;
@@ -62,13 +66,10 @@ public class ConfigurationHandler {
 	public static boolean enableQuartzFence = true;
 	public static boolean enableBlazeFence = true;
 	public static boolean enableBedrockFence = true;
-
-	public static boolean enableNetherBrickFenceGate = true;
-	public static boolean enableNetherBrickFenceRecipeOverride = true;
+	public static boolean enableNetherbrickFence = true;
 
 	public static boolean enableGoldenWaterBucket = true;
 	public static boolean enableWaterEraser = true;
-	public static boolean enableUnusedSticks = false;
 
 	public static void init(File configFile) {
 		Configuration configuration = new Configuration(configFile);
@@ -76,10 +77,7 @@ public class ConfigurationHandler {
 		try {
 			configuration.load();
 
-			configVersion = configuration.get(Configuration.CATEGORY_GENERAL, "configVersion", true, "Config File Version [DO NOT CHANGE!]").getInt();
-
-			// Vanilla Textures Override
-			overrideVanillaTextures = configuration.get(Configuration.CATEGORY_GENERAL, "overrideVanillaTextures", false, "Enable Vanilla Override Textures").getBoolean();
+			configVersion = configuration.get(Configuration.CATEGORY_GENERAL, "configVersion", 1, "Config File Version [DO NOT CHANGE!]").getInt();
 
 			// Torches
 			enableTorches = configuration.get(Configuration.CATEGORY_GENERAL, "enableTorches", true, "Enable Torches").getBoolean();
@@ -87,6 +85,7 @@ public class ConfigurationHandler {
 			enableStoneTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableStoneTorch", true, "Enable Stone Torch").getBoolean();
 			enableObsidianTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableObsidianTorch", true, "Enable Obsidian Torch").getBoolean();
 			enableNetherrackTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherrackTorch", true, "Enable Netherrack Torch").getBoolean();
+			enableNetherbrickTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherbrickTorch", true, "Enable Nether Brick Torch").getBoolean();
 			enableQuartzTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableQuartzTorch", true, "Enable Quartz Torch").getBoolean();
 			enableBedrockTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableBedrockTorch", true, "Enable Bedrock Torch").getBoolean();
 			enableBlazeTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableBlazeTorch", true, "Enable Blaze Torch").getBoolean();
@@ -98,6 +97,7 @@ public class ConfigurationHandler {
 			enableStoneLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableStoneLever", true, "Enable Stone Lever").getBoolean();
 			enableObsidianLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableObsidianLever", true, "Enable Obsidian Lever").getBoolean();
 			enableNetherrackLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherrackLever", true, "Enable Netherrack Lever").getBoolean();
+			enableNetherbrickLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherbrickLever", true, "Enable Nether Brick Lever").getBoolean();
 			enableQuartzLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableQuartzLever", true, "Enable Quartz Lever").getBoolean();
 			enableBedrockLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableBedrockLever", true, "Enable Bedrock Lever").getBoolean();
 			enableBlazeLever = configuration.get(Configuration.CATEGORY_GENERAL, "enableBlazeLever", true, "Enable Blaze Lever").getBoolean();
@@ -108,6 +108,7 @@ public class ConfigurationHandler {
 			enableStoneLadder = configuration.get(Configuration.CATEGORY_GENERAL, "enableStoneLadder", true, "Enable Stone Ladder").getBoolean();
 			enableObsidianLadder = configuration.get(Configuration.CATEGORY_GENERAL, "enableObsidianLadder", true, "Enable Obsidian Ladder").getBoolean();
 			enableNetherrackLadder = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherrackLadder", true, "Enable Netherrack Ladder").getBoolean();
+			enableNetherbrickLadder = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherbrickLadder", true, "Enable Nether Brick Ladder").getBoolean();
 			enableQuartzLadder = configuration.get(Configuration.CATEGORY_GENERAL, "enableQuartzLadder", true, "Enable Quartz Ladder").getBoolean();
 			enableBedrockLadder = configuration.get(Configuration.CATEGORY_GENERAL, "enableBedrockLadder", true, "Enable Bedrock Ladder").getBoolean();
 			enableBlazeLadder = configuration.get(Configuration.CATEGORY_GENERAL, "enableBlazeLadder", true, "Enable Blaze Ladder").getBoolean();
@@ -122,6 +123,7 @@ public class ConfigurationHandler {
 			enableStoneLantern = configuration.get(Configuration.CATEGORY_GENERAL, "enableStoneLantern", true, "Enable Stone Lantern").getBoolean();
 			enableObsidianLantern = configuration.get(Configuration.CATEGORY_GENERAL, "enableObsidianLantern", true, "Enable Obsidian Lantern").getBoolean();
 			enableNetherrackLantern = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherrackLantern", true, "Enable Netherrack Lantern").getBoolean();
+			enableNetherbrickLantern = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherbrickLantern", true, "Enable Nether Brick Lantern").getBoolean();
 			enableQuartzLantern = configuration.get(Configuration.CATEGORY_GENERAL, "enableQuartzLantern", true, "Enable Quartz Lantern").getBoolean();
 			enableBedrockLantern = configuration.get(Configuration.CATEGORY_GENERAL, "enableBedrockLantern", true, "Enable Bedrock Lantern").getBoolean();
 			enableBlazeLantern = configuration.get(Configuration.CATEGORY_GENERAL, "enableBlazeLantern", true, "Enable Blaze Lantern").getBoolean();
@@ -132,15 +134,10 @@ public class ConfigurationHandler {
 			enableStoneFence = configuration.get(Configuration.CATEGORY_GENERAL, "enableStoneFence", true, "Enable Stone Fence/Gate").getBoolean();
 			enableObsidianFence = configuration.get(Configuration.CATEGORY_GENERAL, "enableObsidianFence", true, "Enable Obsidian Fence/Gate").getBoolean();
 			enableNetherrackFence = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherrackFence", true, "Enable Netherrack Fence/Gate").getBoolean();
+			enableNetherbrickFence = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherbrickFence", true, "Enable Nether Brick Fence/Gate").getBoolean();
 			enableQuartzFence = configuration.get(Configuration.CATEGORY_GENERAL, "enableQuartzFence", true, "Enable Quartz Fence/Gate").getBoolean();
 			enableBedrockFence = configuration.get(Configuration.CATEGORY_GENERAL, "enableBedrockFence", true, "Enable Bedrock Fence/Gate").getBoolean();
 			enableBlazeFence = configuration.get(Configuration.CATEGORY_GENERAL, "enableBlazeFence", true, "Enable Blaze Fence/Gate").getBoolean();
-
-			enableNetherBrickFenceGate = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherBrickFenceGate", true, "Enable Nether Brick Fence Gate").getBoolean();
-			enableNetherBrickFenceRecipeOverride = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherBrickFenceRecipeOverride", true, "Enable Nether Brick Fence Recipe Override").getBoolean();
-
-			// Unused Sticks
-			enableUnusedSticks = configuration.get(Configuration.CATEGORY_GENERAL, "enableUnusedSticks", false, "Enable Unused Sticks").getBoolean();
 
 			// Golden Water Bucket
 			enableGoldenWaterBucket = configuration.get(Configuration.CATEGORY_GENERAL, "enableGoldenWaterBucket", true, "Enable Golden Water Bucket").getBoolean();
@@ -151,6 +148,23 @@ public class ConfigurationHandler {
 
 		} finally {
 			configuration.save();
+		}
+		if (enableStoneTorch || enableStoneLever || enableStoneLadder || enableStoneLantern || enableStoneFence) {
+			ModVariables.anyStone = true;
+		}
+		if (enableNetherrackTorch || enableNetherrackLever || enableNetherrackLadder || enableNetherrackLantern || enableNetherrackFence) {
+			ModVariables.anyNetherrack = true;
+		}
+
+		if (enableNetherbrickTorch || enableNetherbrickLever || enableNetherbrickLadder || enableNetherbrickLantern || enableNetherbrickFence) {
+			ModVariables.anyNetherbrick = true;
+		}
+
+		if (enableObsidianTorch || enableObsidianLever || enableObsidianLadder || enableObsidianLantern || enableObsidianFence) {
+			ModVariables.anyObsidian = true;
+		}
+		if (enableQuartzTorch || enableQuartzLever || enableQuartzLadder || enableQuartzLantern || enableQuartzFence) {
+			ModVariables.anyQuartz = true;
 		}
 	}
 }

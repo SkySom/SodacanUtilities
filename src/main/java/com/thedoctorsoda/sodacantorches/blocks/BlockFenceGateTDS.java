@@ -16,7 +16,6 @@ public class BlockFenceGateTDS extends BlockFenceGate {
 		super();
 		this.texture = block;
 		this.setCreativeTab(CreativeTabs.tabRedstone);
-		this.setCreativeTab(CreativeTabs.tabAllSearch);
 	}
 
 	@SideOnly(Side.CLIENT)

@@ -13,37 +13,32 @@ public final class ModItems {
 	public static final ItemWaterEraser water_eraser = (ItemWaterEraser) new ItemWaterEraser().setUnlocalizedName(Names.WATERERASER);
 
 	public static final ItemStickTDS stone_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.STONESTICK);
-	public static final ItemStickTDS iron_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.IRONSTICK);
-	public static final ItemStickTDS gold_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.GOLDSTICK);
-	public static final ItemStickTDS diamond_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.DIAMONDSTICK);
 	public static final ItemStickTDS obsidian_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.OBSIDIANSTICK);
 	public static final ItemStickTDS netherrack_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.NETHERRACKSTICK);
+	public static final ItemStickTDS netherbrick_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.NETHERBRICKSTICK);
 	public static final ItemStickTDS quartz_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.QUARTZSTICK);
 
-	public static final ItemStickTDS bronze_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.BRONZESTICK);
-	public static final ItemStickTDS steel_stick = (ItemStickTDS) new ItemStickTDS().setUnlocalizedName(Names.STEELSTICK);
-
 	public static final void init() {
-		if (ConfigurationHandler.enableStoneTorch || ConfigurationHandler.enableStoneLadder) {
+		if (ModVariables.anyStone) {
 			GameRegistry.registerItem(stone_stick, Names.STONESTICK);
 		}
-		if (ConfigurationHandler.enableObsidianTorch || ConfigurationHandler.enableObsidianLadder) {
+		if (ModVariables.anyObsidian) {
 			GameRegistry.registerItem(obsidian_stick, Names.OBSIDIANSTICK);
 		}
-		if (ConfigurationHandler.enableNetherrackTorch || ConfigurationHandler.enableNetherrackLadder) {
+		if (ModVariables.anyNetherrack) {
 			GameRegistry.registerItem(netherrack_stick, Names.NETHERRACKSTICK);
 		}
-		if (ConfigurationHandler.enableQuartzTorch || ConfigurationHandler.enableQuartzLadder) {
+		if (ModVariables.anyNetherbrick) {
+			GameRegistry.registerItem(netherbrick_stick, Names.NETHERBRICKSTICK);
+		}
+		if (ModVariables.anyQuartz) {
 			GameRegistry.registerItem(quartz_stick, Names.QUARTZSTICK);
 		}
-		if (ConfigurationHandler.enableUnusedSticks) {
-			GameRegistry.registerItem(iron_stick, Names.IRONSTICK);
-			GameRegistry.registerItem(gold_stick, Names.GOLDSTICK);
-			GameRegistry.registerItem(diamond_stick, Names.DIAMONDSTICK);
-			GameRegistry.registerItem(bronze_stick, Names.BRONZESTICK);
-			GameRegistry.registerItem(steel_stick, Names.STEELSTICK);
+		if (ConfigurationHandler.enableGoldenWaterBucket) {
+			GameRegistry.registerItem(golden_water_bucket, Names.GOLDENWATERBUCKET);
 		}
-		GameRegistry.registerItem(golden_water_bucket, Names.GOLDENWATERBUCKET);
-		GameRegistry.registerItem(water_eraser, "water_eraser");
+		if (ConfigurationHandler.enableWaterEraser) {
+			GameRegistry.registerItem(water_eraser, Names.WATERERASER);
+		}
 	}
 }

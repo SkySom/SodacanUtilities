@@ -1,7 +1,9 @@
 package com.thedoctorsoda.sodacantorches.init;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 
 import com.thedoctorsoda.sodacantorches.configuration.ConfigurationHandler;
 
@@ -13,9 +15,23 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 public class ModRecipes {
 	public static void init() {
+
+		Collection<Item> removeSet = new HashSet();
+		Collections.addAll(removeSet, new Item[] { Item.getItemFromBlock(Blocks.fence), Item.getItemFromBlock(Blocks.nether_brick_fence) });
+		Iterator<IRecipe> iterator = CraftingManager.getInstance().getRecipeList().iterator();
+
+		while (iterator.hasNext()) {
+			IRecipe recipe = iterator.next();
+			if (recipe == null)
+				continue;
+			ItemStack output = recipe.getRecipeOutput();
+			if (output != null && output.getItem() != null && removeSet.contains(output.getItem()))
+				iterator.remove();
+		}
 
 		// Wood Lantern
 		if (ConfigurationHandler.enableWoodLantern) {
@@ -28,8 +44,18 @@ public class ModRecipes {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.wood_lantern, 1), "mmm", "gtg", "msm", 'm', "plankWood", 'g', "paneGlass", 't', "torchWood", 's', "woodenRod"));
 		}
 
+		// Fence
+		if (ConfigurationHandler.enableFences) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.wood_fence, 2), "sss", "sss", 's', "stickWood"));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.wood_fence, 2), "sss", "sss", 's', "rodWood"));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.wood_fence, 2), "sss", "sss", 's', "woodRod"));
+
+			GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Blocks.fence), new ItemStack(ModBlocks.wood_fence)));
+			GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModBlocks.wood_fence), new ItemStack(Blocks.fence)));
+		}
+
 		// Stone
-		if (ConfigurationHandler.enableStoneLadder || ConfigurationHandler.enableStoneTorch) {
+		if (ModVariables.anyStone) {
 
 			// Stick
 			GameRegistry.addRecipe(new ItemStack(ModItems.stone_stick, 2), "b", "b", 'b', new ItemStack(Blocks.cobblestone));
@@ -69,8 +95,51 @@ public class ModRecipes {
 			}
 		}
 
+		// Netherbrick
+		if (ModVariables.anyNetherbrick) {
+
+			// Stick
+			GameRegistry.addRecipe(new ItemStack(ModItems.netherbrick_stick, 16), "b", "b", 'b', new ItemStack(Blocks.nether_brick));
+			GameRegistry.addRecipe(new ItemStack(ModItems.netherbrick_stick, 4), "b", "b", 'b', new ItemStack(Items.netherbrick));
+
+			// Torch
+			if (ConfigurationHandler.enableNetherbrickTorch && ConfigurationHandler.enableTorches) {
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_torch, 4), "c", "s", 'c', "torchFuel", 's', "stickNetherbrick"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_torch, 4), "c", "s", 'c', "torchFuel", 's', "rodNetherbrick"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_torch, 4), "c", "s", 'c', "torchFuel", 's', "netherbrickRod"));
+			}
+
+			// Ladder
+			if (ConfigurationHandler.enableNetherbrickLadder) {
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_ladder, 3), "m m", "mmm", "m m", 'm', "stickNetherbrick"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_ladder, 3), "m m", "mmm", "m m", 'm', "rodNetherbrick"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_ladder, 3), "m m", "mmm", "m m", 'm', "netherbrickRod"));
+			}
+
+			// Lantern
+			if (ConfigurationHandler.enableNetherbrickLantern) {
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_lantern, 1), "mmm", "gtg", "msm", 'm', "netherbrickAll", 'g', "paneGlass", 't', "torchWood", 's', "stickNetherbrick"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_lantern, 1), "mmm", "gtg", "msm", 'm', "netherbrickAll", 'g', "paneGlass", 't', "torchWood", 's', "rodNetherbrick"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_lantern, 1), "mmm", "gtg", "msm", 'm', "netherbrickAll", 'g', "paneGlass", 't', "torchWood", 's', "netherbrickRod"));
+			}
+
+			// Fences and Gates
+			if (ConfigurationHandler.enableNetherbrickFence) {
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_fence, 2), "sss", "sss", 's', "stickNetherbrick"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_fence, 2), "sss", "sss", 's', "rodNetherbrick"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_fence, 2), "sss", "sss", 's', "netherbrickRod"));
+
+				GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModBlocks.netherbrick_fence), new ItemStack(Blocks.nether_brick_fence)));
+				GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Blocks.nether_brick_fence), new ItemStack(ModBlocks.netherbrick_fence)));
+
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_fence_gate), "sms", "sms", 's', "stickNetherbrick", 'm', new ItemStack(Blocks.nether_brick)));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_fence_gate), "sms", "sms", 's', "rodNetherbrick", 'm', new ItemStack(Blocks.nether_brick)));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_fence_gate), "sms", "sms", 's', "netherbrickRod", 'm', new ItemStack(Blocks.nether_brick)));
+			}
+		}
+
 		// Obsidian
-		if (ConfigurationHandler.enableObsidianLadder || ConfigurationHandler.enableObsidianTorch) {
+		if (ModVariables.anyObsidian) {
 
 			// Stick
 			GameRegistry.addRecipe(new ItemStack(ModItems.obsidian_stick, 4), "b", "b", 'b', new ItemStack(Blocks.obsidian));
@@ -110,7 +179,7 @@ public class ModRecipes {
 		}
 
 		// Netherrack
-		if (ConfigurationHandler.enableNetherrackLadder || ConfigurationHandler.enableNetherrackTorch) {
+		if (ConfigurationHandler.enableNetherrackLadder || ConfigurationHandler.enableNetherrackTorch || ConfigurationHandler.enableObsidianLantern || ConfigurationHandler.enableObsidianFence) {
 
 			// Stick
 			GameRegistry.addRecipe(new ItemStack(ModItems.netherrack_stick, 2), "b", "b", 'b', new ItemStack(Blocks.netherrack));
@@ -152,11 +221,11 @@ public class ModRecipes {
 		}
 
 		// Quartz
-		if (ConfigurationHandler.enableQuartzLadder || ConfigurationHandler.enableQuartzTorch) {
+		if (ModVariables.anyQuartz) {
 
 			// Stick
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.quartz_stick, 1), "b", "b", 'b', "blockQuartz"));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.quartz_stick, 4), "b", "b", 'b', "blockQuartz"));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.quartz_stick, 4), "b", "b", 'b', "gemQuartz"));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.quartz_stick, 16), "b", "b", 'b', "blockQuartz"));
 
 			// Torch
 			if (ConfigurationHandler.enableQuartzTorch && ConfigurationHandler.enableTorches) {
@@ -222,7 +291,7 @@ public class ModRecipes {
 		}
 
 		// Blaze Fence/Gate
-		if (ConfigurationHandler.enableBlazeFence) {
+		if (ConfigurationHandler.enableBlazeFence && ConfigurationHandler.enableFences) {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.blaze_fence, 16), "sss", "sss", 's', "stickBlaze"));
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.blaze_fence_gate), "sms", "sms", 's', "stickBlaze", 'm', "blockCoal"));
 
@@ -247,47 +316,6 @@ public class ModRecipes {
 		// Water Eraser
 		if (ConfigurationHandler.enableWaterEraser) {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.water_eraser), " ww", "www", "ww ", 'w', new ItemStack(Blocks.wool, 1, 6)));
-		}
-
-		// Unused Sticks
-		if (ConfigurationHandler.enableUnusedSticks) {
-			// Iron
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.iron_stick, 4), "b", "b", 'b', "ingotIron"));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.iron_stick, 36), "b", "b", 'b', "blockIron"));
-
-			// Gold
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.gold_stick, 4), "b", "b", 'b', "ingotGold"));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.gold_stick, 36), "b", "b", 'b', "blockGold"));
-
-			// Diamond
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.diamond_stick, 4), "b", "b", 'b', "gemDiamond"));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.diamond_stick, 36), "b", "b", 'b', "blockDiamond"));
-
-			// Bronze
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.bronze_stick, 4), "b", "b", 'b', "ingotBronze"));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.bronze_stick, 36), "b", "b", 'b', "blockBronze"));
-
-			// Steel
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.steel_stick, 4), "b", "b", 'b', "ingotSteel"));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.steel_stick, 36), "b", "b", 'b', "blockSteel"));
-		}
-
-		// Nether Brick Fence/Fence Gate
-		if (ConfigurationHandler.enableNetherBrickFenceGate) {
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_fence_gate), "sms", "sms", 's', "ingotBrickNether", 'm', new ItemStack(Blocks.nether_brick)));
-		}
-		if (ConfigurationHandler.enableNetherBrickFenceRecipeOverride) {
-			List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
-
-			Iterator<IRecipe> NetherBrick = recipes.iterator();
-
-			while (NetherBrick.hasNext()) {
-				ItemStack is = NetherBrick.next().getRecipeOutput();
-				if (is != null && is.getItem() == Item.getItemFromBlock(Blocks.nether_brick))
-					NetherBrick.remove();
-			}
-			;
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.nether_brick_fence, 2), "sss", "sss", 's', "ingotBrickNether"));
 		}
 
 		// Tool Recipes

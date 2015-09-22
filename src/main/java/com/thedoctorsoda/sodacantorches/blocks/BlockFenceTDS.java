@@ -1,5 +1,6 @@
 package com.thedoctorsoda.sodacantorches.blocks;
 
+import com.thedoctorsoda.sodacantorches.init.ModBlocks;
 import com.thedoctorsoda.sodacantorches.reference.Reference;
 
 import net.minecraft.block.Block;
@@ -15,7 +16,6 @@ public class BlockFenceTDS extends BlockFence {
 		super(textureName, material);
 		this.setBlockName(null);
 		this.setCreativeTab(CreativeTabs.tabDecorations);
-		this.setCreativeTab(CreativeTabs.tabAllSearch);
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class BlockFenceTDS extends BlockFence {
 
 	public boolean canConnectFenceTo(IBlockAccess world, int x, int y, int z) {
 		Block block = world.getBlock(x, y, z);
-		if (block != this && block != Blocks.fence_gate && (block.isAir(world, x, y, z) || (block.isOpaqueCube() && block.renderAsNormalBlock()))) {
+		if (block != this && (block != Blocks.fence_gate && block != ModBlocks.bedrock_fence_gate && block != ModBlocks.blaze_fence_gate && block != ModBlocks.netherbrick_fence_gate && block != ModBlocks.netherrack_fence_gate && block != ModBlocks.obsidian_fence_gate && block != ModBlocks.quartz_fence_gate && block != ModBlocks.stone_fence_gate) && (block.isAir(world, x, y, z) || (!block.isOpaqueCube() || !block.renderAsNormalBlock()))) {
 			return false;
 		} else {
 			return true;
