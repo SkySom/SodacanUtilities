@@ -9,11 +9,17 @@ Additions:
 	Added the Water Eraser
 	Added a configVersion variable in the configs. This is so that Sodacan Torches can detect when the config file was generated. Every version of sodacan torches this value will go up by 1.
 	Added Stone, Obsidian, Netherrack, Quartz, and Blaze levers
+	Added a nether brick tier of items
+	Added a new wooden and nether brick fence--old one can be crafted by placing a new one in the crafting grid
 
 Removals:
-	
+	Removed texture overrides
+	Removed unused items	
 
 Tweaks:
 	Blaze, Obsidian, and Quartz ladder speeds are configurable
 	Blaze, Obsidian, and Quartz ladder speeds doubled by default
 	All ladders now use 2 classes, rather than 4
+	Fixed fence and fence gate creative tabs
+	Fixed fences--they connect to blocks properly
+	
