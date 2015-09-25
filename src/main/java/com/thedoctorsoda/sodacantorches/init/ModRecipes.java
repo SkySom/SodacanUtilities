@@ -118,9 +118,9 @@ public class ModRecipes {
 
 			// Lantern
 			if (ConfigurationHandler.enableNetherbrickLantern) {
-				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_lantern, 1), "mmm", "gtg", "msm", 'm', "netherbrickAll", 'g', "paneGlass", 't', "torchWood", 's', "stickNetherbrick"));
-				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_lantern, 1), "mmm", "gtg", "msm", 'm', "netherbrickAll", 'g', "paneGlass", 't', "torchWood", 's', "rodNetherbrick"));
-				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_lantern, 1), "mmm", "gtg", "msm", 'm', "netherbrickAll", 'g', "paneGlass", 't', "torchWood", 's', "netherbrickRod"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_lantern, 1), "mmm", "gtg", "msm", 'm', new ItemStack(Blocks.nether_brick), 'g', "paneGlass", 't', "torchWood", 's', "stickNetherbrick"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_lantern, 1), "mmm", "gtg", "msm", 'm', new ItemStack(Blocks.nether_brick), 'g', "paneGlass", 't', "torchWood", 's', "rodNetherbrick"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.netherbrick_lantern, 1), "mmm", "gtg", "msm", 'm', new ItemStack(Blocks.nether_brick), 'g', "paneGlass", 't', "torchWood", 's', "netherbrickRod"));
 			}
 
 			// Fences and Gates

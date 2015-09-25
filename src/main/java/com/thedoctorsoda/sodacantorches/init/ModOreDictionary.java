@@ -1,7 +1,5 @@
 package com.thedoctorsoda.sodacantorches.init;
 
-import com.thedoctorsoda.sodacantorches.configuration.ConfigurationHandler;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -27,17 +25,20 @@ public class ModOreDictionary {
 
 		OreDictionary.registerOre("stickAll", Items.stick);
 		OreDictionary.registerOre("stickAll", Items.blaze_rod);
-		if (ConfigurationHandler.enableStoneLadder || ConfigurationHandler.enableStoneTorch) {
+		if (ModVariables.anyStone) {
 			OreDictionary.registerOre("stickAll", ModItems.stone_stick);
 		}
-		if (ConfigurationHandler.enableNetherrackLadder || ConfigurationHandler.enableNetherrackTorch) {
+		if (ModVariables.anyNetherrack) {
 			OreDictionary.registerOre("stickAll", ModItems.netherrack_stick);
 		}
-		if (ConfigurationHandler.enableObsidianLadder || ConfigurationHandler.enableObsidianTorch) {
+		if (ModVariables.anyObsidian) {
 			OreDictionary.registerOre("stickAll", ModItems.obsidian_stick);
 		}
-		if (ConfigurationHandler.enableQuartzLadder || ConfigurationHandler.enableQuartzTorch) {
+		if (ModVariables.anyQuartz) {
 			OreDictionary.registerOre("stickAll", ModItems.quartz_stick);
+		}
+		if (ModVariables.anyNetherbrick) {
+			OreDictionary.registerOre("stickAll", ModItems.netherbrick_stick);
 		}
 
 		OreDictionary.registerOre("stickStone", ModItems.stone_stick);
