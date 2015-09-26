@@ -66,3 +66,6 @@ tile.sodacantorches:quartz_fence_gate.name=Quartz Fence Gate
 tile.sodacantorches:blaze_fence_gate.name=Blaze Fence Gate
 tile.sodacantorches:bedrock_fence_gate.name=Bedrock Fence Gate (Invincible for Map Makers)
 tile.sodacantorches:netherbrick_fence_gate.name=Nether Brick Fence Gate
+
+tile.sodacantorches:gold_bars.name=Golden Bars
+tile.sodacantorches:diamond_bars.name=Diamond Bars

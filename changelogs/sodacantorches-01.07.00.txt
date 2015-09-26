@@ -11,6 +11,7 @@ Additions:
 	Added Stone, Obsidian, Netherrack, Quartz, and Blaze levers
 	Added a nether brick tier of items
 	Added a new wooden and nether brick fence--old one can be crafted by placing a new one in the crafting grid
+	Added Gold and Diamond bars
 
 Removals:
 	Removed texture overrides

@@ -1,5 +1,6 @@
 package com.thedoctorsoda.sodacantorches.init;
 
+import com.thedoctorsoda.sodacantorches.blocks.BlockBarsTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockDefaultLadderTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockFenceGateTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockFenceTDS;
@@ -66,6 +67,9 @@ public final class ModBlocks {
 	public static final BlockFenceGateTDS blaze_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(ModBlocks.blaze_fence).setBlockName(Names.BLAZEFENCEGATE).setResistance(13).setHardness(3);
 	public static final BlockFenceGateTDS bedrock_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(Blocks.bedrock).setBlockName(Names.BEDROCKFENCEGATE).setResistance(18000000F).setHardness(-1);
 	public static final BlockFenceGateTDS netherbrick_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(Blocks.nether_brick).setBlockName(Names.NETHERBRICKFENCEGATE).setResistance(1).setHardness(3);
+
+	public static final BlockBarsTDS gold_bars = (BlockBarsTDS) new BlockBarsTDS(Reference.MOD_ID + ":gold_bars", Material.iron, false).setBlockName(Reference.MOD_ID + ":" + Names.GOLDBARS).setHardness(5).setResistance(30);
+	public static final BlockBarsTDS diamond_bars = (BlockBarsTDS) new BlockBarsTDS(Reference.MOD_ID + ":diamond_bars", Material.iron, false).setBlockName(Reference.MOD_ID + ":" + Names.DIAMONDBARS).setHardness(5).setResistance(30);
 
 	public static final void init() {
 		// Torches
@@ -205,6 +209,8 @@ public final class ModBlocks {
 					GameRegistry.registerBlock(netherbrick_fence_gate, Names.NETHERBRICKFENCEGATE);
 				}
 			}
+			GameRegistry.registerBlock(gold_bars, Names.GOLDBARS);
+			GameRegistry.registerBlock(diamond_bars, Names.DIAMONDBARS);
 		}
 	}
 }

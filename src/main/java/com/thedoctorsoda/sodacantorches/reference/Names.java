@@ -1,6 +1,9 @@
 package com.thedoctorsoda.sodacantorches.reference;
 
 public class Names {
+	public static final String GOLDBARS = "gold_bars";
+	public static final String DIAMONDBARS = "diamond_bars";
+
 	public static final String GOLDENWATERBUCKET = "golden_water_bucket";
 	public static final String WATERERASER = "water_eraser";
 
