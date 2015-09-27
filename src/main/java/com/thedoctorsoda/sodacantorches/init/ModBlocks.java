@@ -7,6 +7,7 @@ import com.thedoctorsoda.sodacantorches.blocks.BlockFenceTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockLadderTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockLanternTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockLeverTDS;
+import com.thedoctorsoda.sodacantorches.blocks.BlockTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockTorchTDS;
 import com.thedoctorsoda.sodacantorches.configuration.ConfigurationHandler;
 import com.thedoctorsoda.sodacantorches.reference.Names;
@@ -70,6 +71,8 @@ public final class ModBlocks {
 
 	public static final BlockBarsTDS gold_bars = (BlockBarsTDS) new BlockBarsTDS(Reference.MOD_ID + ":gold_bars", Material.iron, false).setBlockName(Reference.MOD_ID + ":" + Names.GOLDBARS).setHardness(5).setResistance(30);
 	public static final BlockBarsTDS diamond_bars = (BlockBarsTDS) new BlockBarsTDS(Reference.MOD_ID + ":diamond_bars", Material.iron, false).setBlockName(Reference.MOD_ID + ":" + Names.DIAMONDBARS).setHardness(5).setResistance(30);
+
+	public static final BlockTDS logoblock = (BlockTDS) new BlockTDS().setBlockName("logoblock");
 
 	public static final void init() {
 		// Torches
@@ -211,6 +214,7 @@ public final class ModBlocks {
 			}
 			GameRegistry.registerBlock(gold_bars, Names.GOLDBARS);
 			GameRegistry.registerBlock(diamond_bars, Names.DIAMONDBARS);
+			GameRegistry.registerBlock(logoblock, "logoblock");
 		}
 	}
 }

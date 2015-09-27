@@ -1,0 +1,16 @@
+[
+{
+  "modid": "sodacantorches",
+  "name": "Sodacan Utilities",
+  "description": "Some pretty neat things and stuff",
+  "version": "01.07.00",
+  "mcversion": "1.7.10",
+  "url": "http://thedoctorsoda.com/sodacantorches1-7-10.html",
+  "updateUrl": "",
+  "authorList": ["TheDoctorSoda"],
+  "credits": "Tedyhere, Tinkers' Construct, EnderIO",
+  "logoFile": "SodacanUtilities.png",
+  "screenshots": [],
+  "dependencies": []
+}
+] 
