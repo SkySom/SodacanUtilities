@@ -16,6 +16,7 @@ public class ConfigurationHandler {
 	 */
 
 	public static boolean enableTorches = true;
+	public static boolean enableFlowerPots = true;
 	public static boolean enableLevers = true;
 	public static boolean enableLadders = true;
 	public static boolean enableLanterns = true;
@@ -29,6 +30,16 @@ public class ConfigurationHandler {
 	public static boolean enableBlazeTorch = true;
 	public static boolean enableBoneTorch = false;
 	public static boolean enableNetherbrickTorch = true;
+
+	public static boolean enableWoodFlowerPot = true;
+	public static boolean enableStoneFlowerPot = true;
+	public static boolean enableObsidianFlowerPot = true;
+	public static boolean enableNetherrackFlowerPot = true;
+	public static boolean enableQuartzFlowerPot = true;
+	public static boolean enableBedrockFlowerPot = true;
+	public static boolean enableBlazeFlowerPot = true;
+	public static boolean enableBoneFlowerPot = false;
+	public static boolean enableNetherbrickFlowerPot = true;
 
 	public static boolean enableStoneLever = true;
 	public static boolean enableObsidianLever = true;
@@ -90,6 +101,19 @@ public class ConfigurationHandler {
 			enableBedrockTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableBedrockTorch", true, "Enable Bedrock Torch").getBoolean();
 			enableBlazeTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableBlazeTorch", true, "Enable Blaze Torch").getBoolean();
 			enableBoneTorch = configuration.get(Configuration.CATEGORY_GENERAL, "enableBoneTorch", false, "Enable Bone Torch").getBoolean();
+
+			// Flower Pots
+			enableFlowerPots = configuration.get(Configuration.CATEGORY_GENERAL, "enableFlowerPotes", true, "Enable FlowerPotes").getBoolean();
+
+			enableWoodFlowerPot = configuration.get(Configuration.CATEGORY_GENERAL, "enableWoodFlowerPot", true, "Enable Wood FlowerPot").getBoolean();
+			enableStoneFlowerPot = configuration.get(Configuration.CATEGORY_GENERAL, "enableStoneFlowerPot", true, "Enable Stone FlowerPot").getBoolean();
+			enableObsidianFlowerPot = configuration.get(Configuration.CATEGORY_GENERAL, "enableObsidianFlowerPot", true, "Enable Obsidian FlowerPot").getBoolean();
+			enableNetherrackFlowerPot = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherrackFlowerPot", true, "Enable Netherrack FlowerPot").getBoolean();
+			enableNetherbrickFlowerPot = configuration.get(Configuration.CATEGORY_GENERAL, "enableNetherbrickFlowerPot", true, "Enable Nether Brick FlowerPot").getBoolean();
+			enableQuartzFlowerPot = configuration.get(Configuration.CATEGORY_GENERAL, "enableQuartzFlowerPot", true, "Enable Quartz FlowerPot").getBoolean();
+			enableBedrockFlowerPot = configuration.get(Configuration.CATEGORY_GENERAL, "enableBedrockFlowerPot", true, "Enable Bedrock FlowerPot").getBoolean();
+			enableBlazeFlowerPot = configuration.get(Configuration.CATEGORY_GENERAL, "enableBlazeFlowerPot", true, "Enable Blaze FlowerPot").getBoolean();
+			enableBoneFlowerPot = configuration.get(Configuration.CATEGORY_GENERAL, "enableBoneFlowerPot", false, "Enable Bone FlowerPot").getBoolean();
 
 			// Levers
 			enableLevers = configuration.get(Configuration.CATEGORY_GENERAL, "enableLevers", true, "Enable Levers").getBoolean();
