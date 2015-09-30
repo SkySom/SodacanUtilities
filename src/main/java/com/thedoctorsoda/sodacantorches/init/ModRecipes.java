@@ -58,8 +58,8 @@ public class ModRecipes {
 		if (ModVariables.anyStone) {
 
 			// Stick
-			GameRegistry.addRecipe(new ItemStack(ModItems.stone_stick, 2), "b", "b", 'b', new ItemStack(Blocks.cobblestone));
-			GameRegistry.addRecipe(new ItemStack(ModItems.stone_stick, 4), "b", "b", 'b', new ItemStack(Blocks.stone));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.stone_stick, 2), "b", "b", 'b', "cobblestone"));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.stone_stick, 4), "b", "b", 'b', "stone"));
 
 			// Torch
 			if (ConfigurationHandler.enableStoneTorch && ConfigurationHandler.enableTorches) {
@@ -348,5 +348,9 @@ public class ModRecipes {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.diamond_hoe), "mm", " s", " s", 's', "stickAll", 'm', "gemDiamond"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.diamond_axe), "mm", "ms", " s", 's', "stickAll", 'm', "gemDiamond"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.diamond_shovel), "m", "s", "s", 's', "stickAll", 'm', "gemDiamond"));
+
+		// Bars
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.gold_bars, 16), "mmm", "mmm", 'm', "ingotGold"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.diamond_bars, 16), "mmm", "mmm", 'm', "gemDiamond"));
 	}
 }

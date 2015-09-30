@@ -1,20 +1,18 @@
 package com.thedoctorsoda.sodacantorches.blocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLadder;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class BlockLadderTDS extends BlockLadder {
+public class BlockLadderTDS extends BlockDefaultLadderTDS {
 
 	public BlockLadderTDS(float speed) {
 		super();
 		this.setBlockName(null);
 		this.setBlockTextureName(null);
 		this.setCreativeTab(CreativeTabs.tabDecorations);
-		this.setCreativeTab(CreativeTabs.tabAllSearch);
 		this.speed = speed;
 	}
 

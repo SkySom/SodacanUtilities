@@ -1,4 +1,6 @@
 #Item Localisation
+item.flowerPot.name=Hardened Clay Flower Pot
+
 item.stick.name=Wooden Stick
 item.sodacantorches:netherbrick_stick.name=Nether Brick Stick
 item.sodacantorches:stone_stick.name=Stone Stick
@@ -10,6 +12,10 @@ item.sodacantorches:golden_water_bucket.name=Golden Water Bucket
 item.sodacantorches:water_eraser.name=Water Eraser
 
 #Block Localisation
+tile.sodacantorches:logoblock.name=Sodacan Utilites: Logoblock
+tile.sodacantorches:blaze_block.name=Blaze Block
+tile.sodacantorches:charcoal_block.name=Charcoal Block
+
 tile.torch.name=Wooden Torch
 tile.sodacantorches:stone_torch.name=Stone Torch
 tile.sodacantorches:netherbrick_torch.name=Nether Brick Torch
@@ -20,6 +26,16 @@ tile.sodacantorches:blaze_torch.name=Blaze Torch
 tile.sodacantorches:bone_torch.name=Bone Torch
 tile.sodacantorches:bedrock_torch.name=Bedrock Torch (Invincible for Map Makers)
 
+tile.flowerPot.name=Hardened Clay Flower Pot
+tile.sodacantorches:wood_flowerpot.name=Wooden Flower Pot
+tile.sodacantorches:stone_flowerpot.name=Stone Flower Pot
+tile.sodacantorches:netherbrick_flowerpot.name=Nether Brick Flower Pot
+tile.sodacantorches:quartz_flowerpot.name=Quartz Flower Pot
+tile.sodacantorches:obsidian_flowerpot.name=Obsidian Flower Pot
+tile.sodacantorches:netherrack_flowerpot.name=Netherrack Flower Pot
+tile.sodacantorches:blaze_flowerpot.name=Blaze Flower Pot
+tile.sodacantorches:bedrock_flowerpot.name=Bedrock Flower Pot (Invincible for Map Makers)
+
 tile.ladder.name=Wooden Ladder
 tile.sodacantorches:stone_ladder.name=Stone Ladder
 tile.sodacantorches:quartz_ladder.name=Quartz Ladder
@@ -27,6 +43,7 @@ tile.sodacantorches:obsidian_ladder.name=Obsidian Ladder
 tile.sodacantorches:netherrack_ladder.name=Netherrack Ladder
 tile.sodacantorches:netherbrick_ladder.name=Nether Brick Ladder
 tile.sodacantorches:blaze_ladder.name=Blaze Ladder
+tile.sodacantorches:ender_ladder.name=Ender Ladder
 tile.sodacantorches:bedrock_ladder.name=Bedrock Ladder (Invincible for Map Makers)
 
 tile.sodacantorches:wood_lantern.name=Wooden Lantern
@@ -69,3 +86,8 @@ tile.sodacantorches:netherbrick_fence_gate.name=Nether Brick Fence Gate
 
 tile.sodacantorches:gold_bars.name=Golden Bars
 tile.sodacantorches:diamond_bars.name=Diamond Bars
+
+tile.sodacantorches:hardened_sand.name=Hardened Sand
+tile.sodacantorches:sandy_brick.name=Sandy Bricks
+
+tile.sodacantorches:thin_ice.name=Thin Ice

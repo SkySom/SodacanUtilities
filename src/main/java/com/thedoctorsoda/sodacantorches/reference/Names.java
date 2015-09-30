@@ -1,6 +1,17 @@
 package com.thedoctorsoda.sodacantorches.reference;
 
 public class Names {
+	public static final String BLAZEBLOCK = "blaze_block";
+	public static final String CHARCOALBLOCK = "charcoal_block";
+
+	public static final String ENDERLADDER = "ender_ladder";
+	public static final String ENDERPICKAXE = "ender_pickaxe";
+
+	public static final String HARDENEDSAND = "hardened_sand";
+	public static final String SANDYBRICK = "sandy_brick";
+
+	public static final String THINICE = "thin_ice";
+
 	public static final String GOLDBARS = "gold_bars";
 	public static final String DIAMONDBARS = "diamond_bars";
 
@@ -15,6 +26,15 @@ public class Names {
 	public static final String QUARTZLANTERN = "quartz_lantern";
 	public static final String BLAZELANTERN = "blaze_lantern";
 	public static final String BEDROCKLANTERN = "bedrock_lantern";
+
+	public static final String WOODFLOWERPOT = "wood_flowerpot";
+	public static final String STONEFLOWERPOT = "stone_flowerpot";
+	public static final String OBSIDIANFLOWERPOT = "obsidian_flowerpot";
+	public static final String NETHERRACKFLOWERPOT = "netherrack_flowerpot";
+	public static final String NETHERBRICKFLOWERPOT = "netherbrick_flowerpot";
+	public static final String QUARTZFLOWERPOT = "quartz_flowerpot";
+	public static final String BLAZEFLOWERPOT = "blaze_flowerpot";
+	public static final String BEDROCKFLOWERPOT = "bedrock_flowerpot";
 
 	public static final String WOODFENCE = "wood_fence";
 	public static final String NETHERBRICKFENCE = "netherbrick_fence";

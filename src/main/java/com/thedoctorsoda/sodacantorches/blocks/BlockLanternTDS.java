@@ -14,10 +14,9 @@ public class BlockLanternTDS extends BlockGlass {
 
 	public IIcon[] icons = new IIcon[6];
 
-	public BlockLanternTDS(String textureName) {
+	public BlockLanternTDS() {
 		super(Material.glass, false);
 		this.setBlockName(null);
-		this.setBlockTextureName(textureName);
 		this.setCreativeTab(CreativeTabs.tabDecorations);
 		this.setBlockBounds(0.2F, 0, 0.2F, 0.8F, 0.75F, 0.8F);
 	}
@@ -34,12 +33,13 @@ public class BlockLanternTDS extends BlockGlass {
 
 	@Override
 	public void registerBlockIcons(IIconRegister reg) {
-		this.icons[0] = reg.registerIcon(this.textureName + "_bottom");
-		this.icons[1] = reg.registerIcon(this.textureName + "_top");
-		this.icons[2] = reg.registerIcon(this.textureName + "_side");
-		this.icons[3] = reg.registerIcon(this.textureName + "_side");
-		this.icons[4] = reg.registerIcon(this.textureName + "_side");
-		this.icons[5] = reg.registerIcon(this.textureName + "_side");
+		String name = Reference.MOD_ID + ":" + getUnwrappedUnlocalizedName(super.getUnlocalizedName());
+		this.icons[0] = reg.registerIcon(name + "_bottom");
+		this.icons[1] = reg.registerIcon(name + "_top");
+		this.icons[2] = reg.registerIcon(name + "_side");
+		this.icons[3] = reg.registerIcon(name + "_side");
+		this.icons[4] = reg.registerIcon(name + "_side");
+		this.icons[5] = reg.registerIcon(name + "_side");
 	}
 
 	@Override

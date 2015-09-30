@@ -1,12 +1,14 @@
 package com.thedoctorsoda.sodacantorches.blocks;
 
+import com.thedoctorsoda.sodacantorches.reference.Reference;
+
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockBarsTDS extends BlockPane {
 	public BlockBarsTDS(String textureName, Material material, boolean bool) {
-		super(textureName + "_top", textureName, material, bool);
+		super(Reference.MOD_ID + ":" + textureName + "_top", Reference.MOD_ID + ":" + textureName, material, bool);
 		this.setCreativeTab(CreativeTabs.tabDecorations);
 	}
 

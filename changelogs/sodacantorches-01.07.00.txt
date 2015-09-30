@@ -8,10 +8,19 @@ Additions:
 	Added the Golden Water Bucket
 	Added the Water Eraser
 	Added a configVersion variable in the configs. This is so that Sodacan Torches can detect when the config file was generated. Every version of sodacan torches this value will go up by 1.
-	Added Stone, Obsidian, Netherrack, Quartz, and Blaze levers
+	Added Stone, Obsidian, Netherrack, Quartz, and Blaze levers (Work in Progress)
 	Added a nether brick tier of items
 	Added a new wooden and nether brick fence--old one can be crafted by placing a new one in the crafting grid
 	Added Gold and Diamond bars
+	Added a mcmod.info file
+	Added a creative-only "logoblock"\
+	Added the Hardened Sand block
+	Added the Sandy Bricks block
+	Added the Ender Ladder
+	Added some in-inventory 3-D rendering (Thanks to @ganymedes01 for that!)
+	Added flower pots
+	Added the blaze block
+	Added the charcoal block
 
 Removals:
 	Removed texture overrides
