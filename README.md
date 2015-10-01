@@ -1,5 +1,5 @@
-# SodacanTorches for Minecraft 1.7.10
-SodacanTorches adds a variety of utilities to your minecraft worlds!
+# SodacanUtilities for Minecraft 1.7.10
+SodacanUtilities adds a variety of utilities to your minecraft worlds!
 
 #Downloads
 You can find the latest release [here](http://www.thedoctorsoda.com/sodacantorches1-7-10.html).
