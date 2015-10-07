@@ -1,9 +1,19 @@
 package com.thedoctorsoda.sodacantorches.proxy;
 
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+
 public abstract class CommonProxy {
-	public abstract void preInit();
+	public void preInit(FMLPreInitializationEvent e) {
 
-	public abstract void init();
+	}
 
-	public abstract void postInit();
+	public void init(FMLInitializationEvent e) {
+
+	}
+
+	public void postInit(FMLPostInitializationEvent e) {
+
+	}
 }

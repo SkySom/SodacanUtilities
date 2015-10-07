@@ -20,7 +20,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 
 public final class ModBlocks {
-	public static final BlockFlowerPotTDS wood_flowerpot = (BlockFlowerPotTDS) new BlockFlowerPotTDS().setBlockName(Names.WOODFLOWERPOT);
+	public final static BlockFlowerPotTDS wood_flowerpot = (BlockFlowerPotTDS) new BlockFlowerPotTDS().setBlockName(Names.WOODFLOWERPOT);
 	public static final BlockFlowerPotTDS stone_flowerpot = (BlockFlowerPotTDS) new BlockFlowerPotTDS().setBlockName(Names.STONEFLOWERPOT);
 	public static final BlockFlowerPotTDS obsidian_flowerpot = (BlockFlowerPotTDS) new BlockFlowerPotTDS().setBlockName(Names.OBSIDIANFLOWERPOT).setResistance(6000F).setHardness(5F);
 	public static final BlockFlowerPotTDS netherrack_flowerpot = (BlockFlowerPotTDS) new BlockFlowerPotTDS().setBlockName(Names.NETHERRACKFLOWERPOT);
@@ -36,7 +36,6 @@ public final class ModBlocks {
 	public static final BlockTorchTDS quartz_torch = (BlockTorchTDS) new BlockTorchTDS().setBlockName(Names.QUARTZTORCH).setLightLevel(0.9375F);
 	public static final BlockTorchTDS bedrock_torch = (BlockTorchTDS) new BlockTorchTDS().setBlockName(Names.BEDROCKTORCH).setResistance(18000000F).setLightLevel(1F).setHardness(-1F);
 	public static final BlockTorchTDS blaze_torch = (BlockTorchTDS) new BlockTorchTDS().setBlockName(Names.BLAZETORCH).setLightLevel(1F);
-	public static final BlockTorchTDS bone_torch = (BlockTorchTDS) new BlockTorchTDS().setBlockName(Names.BONETORCH).setLightLevel(0.5F);
 
 	public static final BlockLeverTDS stone_lever = (BlockLeverTDS) new BlockLeverTDS().setBlockName(Names.STONELEVER);
 	public static final BlockLeverTDS obsidian_lever = (BlockLeverTDS) new BlockLeverTDS().setBlockName(Names.OBSIDIANLEVER).setResistance(6000F).setHardness(5F);
@@ -93,184 +92,106 @@ public final class ModBlocks {
 	public static final BlockTDS charcoal_block = (BlockTDS) new BlockTDS(Material.rock).setBlockName(Names.CHARCOALBLOCK);
 
 	public static final void init() {
+
+		wood_flowerpot.fpItem = ModItems.wood_flowerpot;
+		stone_flowerpot.fpItem = ModItems.stone_flowerpot;
+		obsidian_flowerpot.fpItem = ModItems.obsidian_flowerpot;
+		netherrack_flowerpot.fpItem = ModItems.netherrack_flowerpot;
+		quartz_flowerpot.fpItem = ModItems.quartz_flowerpot;
+		bedrock_flowerpot.fpItem = ModItems.bedrock_flowerpot;
+		blaze_flowerpot.fpItem = ModItems.blaze_flowerpot;
+		netherbrick_flowerpot.fpItem = ModItems.netherbrick_flowerpot;
+
 		// Torches
 		if (ConfigurationHandler.enableTorches) {
-			if (ConfigurationHandler.enableStoneTorch) {
-				GameRegistry.registerBlock(stone_torch, Names.STONETORCH);
-			}
-			if (ConfigurationHandler.enableObsidianTorch) {
-				GameRegistry.registerBlock(obsidian_torch, Names.OBSIDIANTORCH);
-			}
-			if (ConfigurationHandler.enableNetherrackTorch) {
-				GameRegistry.registerBlock(netherrack_torch, Names.NETHERRACKTORCH);
-			}
-			if (ConfigurationHandler.enableQuartzTorch) {
-				GameRegistry.registerBlock(quartz_torch, Names.QUARTZTORCH);
-			}
-			if (ConfigurationHandler.enableBedrockTorch) {
-				GameRegistry.registerBlock(bedrock_torch, Names.BEDROCKTORCH);
-			}
-			if (ConfigurationHandler.enableBlazeTorch) {
-				GameRegistry.registerBlock(blaze_torch, Names.BLAZETORCH);
-			}
-			if (ConfigurationHandler.enableBoneTorch) {
-				GameRegistry.registerBlock(bone_torch, Names.BONETORCH);
-			}
-			if (ConfigurationHandler.enableNetherbrickTorch) {
-				GameRegistry.registerBlock(netherbrick_torch, Names.NETHERBRICKTORCH);
-			}
+			GameRegistry.registerBlock(stone_torch, Names.STONETORCH);
+			GameRegistry.registerBlock(obsidian_torch, Names.OBSIDIANTORCH);
+			GameRegistry.registerBlock(netherrack_torch, Names.NETHERRACKTORCH);
+			GameRegistry.registerBlock(quartz_torch, Names.QUARTZTORCH);
+			GameRegistry.registerBlock(bedrock_torch, Names.BEDROCKTORCH);
+			GameRegistry.registerBlock(blaze_torch, Names.BLAZETORCH);
+			GameRegistry.registerBlock(netherbrick_torch, Names.NETHERBRICKTORCH);
+
 		}
 
 		// Flower Pot
 		if (ConfigurationHandler.enableFlowerPots) {
-			if (ConfigurationHandler.enableWoodFlowerPot) {
-				GameRegistry.registerBlock(wood_flowerpot, Names.WOODFLOWERPOT);
-			}
-			if (ConfigurationHandler.enableStoneFlowerPot) {
-				GameRegistry.registerBlock(stone_flowerpot, Names.STONEFLOWERPOT);
-			}
-			if (ConfigurationHandler.enableObsidianFlowerPot) {
-				GameRegistry.registerBlock(obsidian_flowerpot, Names.OBSIDIANFLOWERPOT);
-			}
-			if (ConfigurationHandler.enableNetherrackFlowerPot) {
-				GameRegistry.registerBlock(netherrack_flowerpot, Names.NETHERRACKFLOWERPOT);
-			}
-			if (ConfigurationHandler.enableQuartzFlowerPot) {
-				GameRegistry.registerBlock(quartz_flowerpot, Names.QUARTZFLOWERPOT);
-			}
-			if (ConfigurationHandler.enableBedrockFlowerPot) {
-				GameRegistry.registerBlock(bedrock_flowerpot, Names.BEDROCKFLOWERPOT);
-			}
-			if (ConfigurationHandler.enableBlazeFlowerPot) {
-				GameRegistry.registerBlock(blaze_flowerpot, Names.BLAZEFLOWERPOT);
-			}
-			if (ConfigurationHandler.enableNetherbrickFlowerPot) {
-				GameRegistry.registerBlock(netherbrick_flowerpot, Names.NETHERBRICKFLOWERPOT);
-			}
+			GameRegistry.registerBlock(wood_flowerpot, Names.WOODFLOWERPOT);
+			GameRegistry.registerBlock(stone_flowerpot, Names.STONEFLOWERPOT);
+			GameRegistry.registerBlock(obsidian_flowerpot, Names.OBSIDIANFLOWERPOT);
+			GameRegistry.registerBlock(netherrack_flowerpot, Names.NETHERRACKFLOWERPOT);
+			GameRegistry.registerBlock(quartz_flowerpot, Names.QUARTZFLOWERPOT);
+			GameRegistry.registerBlock(bedrock_flowerpot, Names.BEDROCKFLOWERPOT);
+			GameRegistry.registerBlock(blaze_flowerpot, Names.BLAZEFLOWERPOT);
+			GameRegistry.registerBlock(netherbrick_flowerpot, Names.NETHERBRICKFLOWERPOT);
 		}
 
 		// Ladders
 		if (ConfigurationHandler.enableLadders) {
-			if (ConfigurationHandler.enableStoneLadder) {
-				GameRegistry.registerBlock(stone_ladder, Names.STONELADDER);
-			}
-			if (ConfigurationHandler.enableObsidianLadder) {
-				GameRegistry.registerBlock(obsidian_ladder, Names.OBSIDIANLADDER);
-			}
-			if (ConfigurationHandler.enableNetherrackLadder) {
-				GameRegistry.registerBlock(netherrack_ladder, Names.NETHERRACKLADDER);
-			}
-			if (ConfigurationHandler.enableQuartzLadder) {
-				GameRegistry.registerBlock(quartz_ladder, Names.QUARTZLADDER);
-			}
-			if (ConfigurationHandler.enableBedrockLadder) {
-				GameRegistry.registerBlock(bedrock_ladder, Names.BEDROCKLADDER);
-			}
-			if (ConfigurationHandler.enableBlazeLadder) {
-				GameRegistry.registerBlock(blaze_ladder, Names.BLAZELADDER);
-			}
-			if (ConfigurationHandler.enableNetherbrickLadder) {
-				GameRegistry.registerBlock(netherbrick_ladder, Names.NETHERBRICKLADDER);
-			}
+			GameRegistry.registerBlock(stone_ladder, Names.STONELADDER);
+			GameRegistry.registerBlock(obsidian_ladder, Names.OBSIDIANLADDER);
+			GameRegistry.registerBlock(netherrack_ladder, Names.NETHERRACKLADDER);
+			GameRegistry.registerBlock(quartz_ladder, Names.QUARTZLADDER);
+			GameRegistry.registerBlock(bedrock_ladder, Names.BEDROCKLADDER);
+			GameRegistry.registerBlock(blaze_ladder, Names.BLAZELADDER);
+			GameRegistry.registerBlock(netherbrick_ladder, Names.NETHERBRICKLADDER);
+			GameRegistry.registerBlock(ender_ladder, Names.ENDERLADDER);
 		}
 
 		// Levers
 		if (ConfigurationHandler.enableLevers) {
-			if (ConfigurationHandler.enableStoneLever) {
-				GameRegistry.registerBlock(stone_lever, Names.STONELEVER);
-			}
-			if (ConfigurationHandler.enableObsidianLever) {
-				GameRegistry.registerBlock(obsidian_lever, Names.OBSIDIANLEVER);
-			}
-			if (ConfigurationHandler.enableNetherrackLever) {
-				GameRegistry.registerBlock(netherrack_lever, Names.NETHERRACKLEVER);
-			}
-			if (ConfigurationHandler.enableQuartzLever) {
-				GameRegistry.registerBlock(quartz_lever, Names.QUARTZLEVER);
-			}
-			if (ConfigurationHandler.enableBedrockLever) {
-				GameRegistry.registerBlock(bedrock_lever, Names.BEDROCKLEVER);
-			}
-			if (ConfigurationHandler.enableBlazeLever) {
-				GameRegistry.registerBlock(blaze_lever, Names.BLAZELEVER);
-			}
-			if (ConfigurationHandler.enableNetherbrickLever) {
-				GameRegistry.registerBlock(netherbrick_lever, Names.NETHERBRICKLEVER);
-			}
+			GameRegistry.registerBlock(stone_lever, Names.STONELEVER);
+			GameRegistry.registerBlock(obsidian_lever, Names.OBSIDIANLEVER);
+			GameRegistry.registerBlock(netherrack_lever, Names.NETHERRACKLEVER);
+			GameRegistry.registerBlock(quartz_lever, Names.QUARTZLEVER);
+			GameRegistry.registerBlock(bedrock_lever, Names.BEDROCKLEVER);
+			GameRegistry.registerBlock(blaze_lever, Names.BLAZELEVER);
+			GameRegistry.registerBlock(netherbrick_lever, Names.NETHERBRICKLEVER);
 		}
 
 		// Lanterns
 		if (ConfigurationHandler.enableLanterns) {
-			if (ConfigurationHandler.enableWoodLantern) {
-				GameRegistry.registerBlock(wood_lantern, Names.WOODLANTERN);
-			}
-			if (ConfigurationHandler.enableStoneLantern) {
-				GameRegistry.registerBlock(stone_lantern, Names.STONELANTERN);
-			}
-			if (ConfigurationHandler.enableObsidianLantern) {
-				GameRegistry.registerBlock(obsidian_lantern, Names.OBSIDIANLANTERN);
-			}
-			if (ConfigurationHandler.enableNetherrackLantern) {
-				GameRegistry.registerBlock(netherrack_lantern, Names.NETHERRACKLANTERN);
-			}
-			if (ConfigurationHandler.enableQuartzLantern) {
-				GameRegistry.registerBlock(quartz_lantern, Names.QUARTZLANTERN);
-			}
-			if (ConfigurationHandler.enableBedrockLantern) {
-				GameRegistry.registerBlock(bedrock_lantern, Names.BEDROCKLANTERN);
-			}
-			if (ConfigurationHandler.enableBlazeLantern) {
-				GameRegistry.registerBlock(blaze_lantern, Names.BLAZELANTERN);
-			}
-			if (ConfigurationHandler.enableNetherbrickLantern) {
-				GameRegistry.registerBlock(netherbrick_lantern, Names.NETHERBRICKLANTERN);
-			}
+			GameRegistry.registerBlock(wood_lantern, Names.WOODLANTERN);
+			GameRegistry.registerBlock(stone_lantern, Names.STONELANTERN);
+			GameRegistry.registerBlock(obsidian_lantern, Names.OBSIDIANLANTERN);
+			GameRegistry.registerBlock(netherrack_lantern, Names.NETHERRACKLANTERN);
+			GameRegistry.registerBlock(quartz_lantern, Names.QUARTZLANTERN);
+			GameRegistry.registerBlock(bedrock_lantern, Names.BEDROCKLANTERN);
+			GameRegistry.registerBlock(blaze_lantern, Names.BLAZELANTERN);
+			GameRegistry.registerBlock(netherbrick_lantern, Names.NETHERBRICKLANTERN);
+		}
 
-			// Fences
-			if (ConfigurationHandler.enableFences) {
-				GameRegistry.registerBlock(wood_fence, Names.WOODFENCE);
-				if (ConfigurationHandler.enableStoneFence) {
-					GameRegistry.registerBlock(stone_fence, Names.STONEFENCE);
-					GameRegistry.registerBlock(stone_fence_gate, Names.STONEFENCEGATE);
-				}
-				if (ConfigurationHandler.enableObsidianFence) {
-					GameRegistry.registerBlock(obsidian_fence, Names.OBSIDIANFENCE);
-					GameRegistry.registerBlock(obsidian_fence_gate, Names.OBSIDIANFENCEGATE);
-				}
-				if (ConfigurationHandler.enableNetherrackFence) {
-					GameRegistry.registerBlock(netherrack_fence, Names.NETHERRACKFENCE);
-					GameRegistry.registerBlock(netherrack_fence_gate, Names.NETHERRACKFENCEGATE);
-				}
-				if (ConfigurationHandler.enableQuartzFence) {
-					GameRegistry.registerBlock(quartz_fence, Names.QUARTZFENCE);
-					GameRegistry.registerBlock(quartz_fence_gate, Names.QUARTZFENCEGATE);
-				}
-				if (ConfigurationHandler.enableBedrockFence) {
-					GameRegistry.registerBlock(bedrock_fence, Names.BEDROCKFENCE);
-					GameRegistry.registerBlock(bedrock_fence_gate, Names.BEDROCKFENCEGATE);
-				}
-				if (ConfigurationHandler.enableBlazeFence) {
-					GameRegistry.registerBlock(blaze_fence, Names.BLAZEFENCE);
-					GameRegistry.registerBlock(blaze_fence_gate, Names.BLAZEFENCEGATE);
-				}
-				if (ConfigurationHandler.enableNetherbrickFence) {
-					GameRegistry.registerBlock(netherbrick_fence, Names.NETHERBRICKFENCE);
-					GameRegistry.registerBlock(netherbrick_fence_gate, Names.NETHERBRICKFENCEGATE);
-				}
-			}
+		// Fences
+		if (ConfigurationHandler.enableFences) {
+			GameRegistry.registerBlock(wood_fence, Names.WOODFENCE);
+			GameRegistry.registerBlock(stone_fence, Names.STONEFENCE);
+			GameRegistry.registerBlock(stone_fence_gate, Names.STONEFENCEGATE);
+			GameRegistry.registerBlock(obsidian_fence, Names.OBSIDIANFENCE);
+			GameRegistry.registerBlock(obsidian_fence_gate, Names.OBSIDIANFENCEGATE);
+			GameRegistry.registerBlock(netherrack_fence, Names.NETHERRACKFENCE);
+			GameRegistry.registerBlock(netherrack_fence_gate, Names.NETHERRACKFENCEGATE);
+			GameRegistry.registerBlock(quartz_fence, Names.QUARTZFENCE);
+			GameRegistry.registerBlock(quartz_fence_gate, Names.QUARTZFENCEGATE);
+			GameRegistry.registerBlock(bedrock_fence, Names.BEDROCKFENCE);
+			GameRegistry.registerBlock(bedrock_fence_gate, Names.BEDROCKFENCEGATE);
+			GameRegistry.registerBlock(blaze_fence, Names.BLAZEFENCE);
+			GameRegistry.registerBlock(blaze_fence_gate, Names.BLAZEFENCEGATE);
+			GameRegistry.registerBlock(netherbrick_fence, Names.NETHERBRICKFENCE);
+			GameRegistry.registerBlock(netherbrick_fence_gate, Names.NETHERBRICKFENCEGATE);
+		}
+
+		// Bars
+		if (ConfigurationHandler.enableBars) {
 			GameRegistry.registerBlock(gold_bars, Names.GOLDBARS);
 			GameRegistry.registerBlock(diamond_bars, Names.DIAMONDBARS);
-
-			GameRegistry.registerBlock(logoblock, "logoblock");
-
-			GameRegistry.registerBlock(hardened_sand, Names.HARDENEDSAND);
-			GameRegistry.registerBlock(sandy_brick, Names.SANDYBRICK);
-
-			GameRegistry.registerBlock(blaze_block, Names.BLAZEBLOCK);
-			GameRegistry.registerBlock(charcoal_block, Names.CHARCOALBLOCK);
-
-			GameRegistry.registerBlock(ender_ladder, Names.ENDERLADDER);
 		}
+
+		GameRegistry.registerBlock(logoblock, Names.LOGOBLOCK);
+		GameRegistry.registerBlock(hardened_sand, Names.HARDENEDSAND);
+		GameRegistry.registerBlock(sandy_brick, Names.SANDYBRICK);
+
+		GameRegistry.registerBlock(blaze_block, Names.BLAZEBLOCK);
+		GameRegistry.registerBlock(charcoal_block, Names.CHARCOALBLOCK);
 	}
 
 	public static interface ISubBlocksBlock {

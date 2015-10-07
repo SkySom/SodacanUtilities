@@ -13,10 +13,10 @@ Additions:
 	Added a new wooden and nether brick fence--old one can be crafted by placing a new one in the crafting grid
 	Added Gold and Diamond bars
 	Added a mcmod.info file
-	Added a creative-only "logoblock"\
+	Added a creative-only "logoblock"
 	Added the Hardened Sand block
 	Added the Sandy Bricks block
-	Added the Ender Ladder
+	Added the Ender Ladder + Ender Stick
 	Added some in-inventory 3-D rendering (Thanks to @ganymedes01 for that!)
 	Added flower pots
 	Added the blaze block
@@ -32,4 +32,7 @@ Tweaks:
 	All ladders now use 2 classes, rather than 4
 	Fixed fence and fence gate creative tabs
 	Fixed fences--they connect to blocks properly
-	
+	Removed individual removal of blocks configs
+	Individual torch ore dictionary entries
+	Fixed proxies
+	Init method now runs off on the proper event

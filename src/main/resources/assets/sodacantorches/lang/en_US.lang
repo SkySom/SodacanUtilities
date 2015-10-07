@@ -7,9 +7,20 @@ item.sodacantorches:stone_stick.name=Stone Stick
 item.sodacantorches:obsidian_stick.name=Obsidian Stick
 item.sodacantorches:netherrack_stick.name=Netherrack Stick
 item.sodacantorches:quartz_stick.name=Quartz Stick
+item.sodacantorches:ender_stick.name=Ender Stick
 
 item.sodacantorches:golden_water_bucket.name=Golden Water Bucket
 item.sodacantorches:water_eraser.name=Water Eraser
+
+
+item.sodacantorches:wood_flowerpot_item.name=Wooden Flower Pot
+item.sodacantorches:stone_flowerpot_item.name=Stone Flower Pot
+item.sodacantorches:netherbrick_flowerpot_item.name=Nether Brick Flower Pot
+item.sodacantorches:quartz_flowerpot_item.name=Quartz Flower Pot
+item.sodacantorches:obsidian_flowerpot_item.name=Obsidian Flower Pot
+item.sodacantorches:netherrack_flowerpot_item.name=Netherrack Flower Pot
+item.sodacantorches:blaze_flowerpot_item.name=Blaze Flower Pot
+item.sodacantorches:bedrock_flowerpot_item.name=Bedrock Flower Pot (Invincible for Map Makers)
 
 #Block Localisation
 tile.sodacantorches:logoblock.name=Sodacan Utilites: Logoblock
@@ -26,7 +37,6 @@ tile.sodacantorches:blaze_torch.name=Blaze Torch
 tile.sodacantorches:bone_torch.name=Bone Torch
 tile.sodacantorches:bedrock_torch.name=Bedrock Torch (Invincible for Map Makers)
 
-tile.flowerPot.name=Hardened Clay Flower Pot
 tile.sodacantorches:wood_flowerpot.name=Wooden Flower Pot
 tile.sodacantorches:stone_flowerpot.name=Stone Flower Pot
 tile.sodacantorches:netherbrick_flowerpot.name=Nether Brick Flower Pot

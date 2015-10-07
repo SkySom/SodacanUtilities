@@ -16,34 +16,38 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("torchAll", new ItemStack(ModBlocks.bedrock_torch, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("torchAll", new ItemStack(ModBlocks.stone_torch, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("torchAll", new ItemStack(ModBlocks.quartz_torch, 1, OreDictionary.WILDCARD_VALUE));
-		OreDictionary.registerOre("torchAll", new ItemStack(ModBlocks.bone_torch, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("torchAll", new ItemStack(ModBlocks.blaze_torch, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("torchAll", new ItemStack(ModBlocks.obsidian_torch, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("torchAll", new ItemStack(ModBlocks.netherrack_torch, 1, OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("torchAll", new ItemStack(ModBlocks.netherbrick_torch, 1, OreDictionary.WILDCARD_VALUE));
+
+		OreDictionary.registerOre("torchRedstone", new ItemStack(Blocks.redstone_torch, 1, OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("torchBedrock", new ItemStack(ModBlocks.bedrock_torch, 1, OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("torchStone", new ItemStack(ModBlocks.stone_torch, 1, OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("torchQuartz", new ItemStack(ModBlocks.quartz_torch, 1, OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("torchBlaze", new ItemStack(ModBlocks.blaze_torch, 1, OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("torchObsidian", new ItemStack(ModBlocks.obsidian_torch, 1, OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("torchNetherrack", new ItemStack(ModBlocks.netherrack_torch, 1, OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("torchNetherbrick", new ItemStack(ModBlocks.netherbrick_torch, 1, OreDictionary.WILDCARD_VALUE));
 
 		OreDictionary.registerOre("torchWood", new ItemStack(Blocks.torch, 1, OreDictionary.WILDCARD_VALUE));
 
 		OreDictionary.registerOre("stickAll", Items.stick);
 		OreDictionary.registerOre("stickAll", Items.blaze_rod);
-		if (ModVariables.anyStone) {
-			OreDictionary.registerOre("stickAll", ModItems.stone_stick);
-		}
-		if (ModVariables.anyNetherrack) {
-			OreDictionary.registerOre("stickAll", ModItems.netherrack_stick);
-		}
-		if (ModVariables.anyObsidian) {
-			OreDictionary.registerOre("stickAll", ModItems.obsidian_stick);
-		}
-		if (ModVariables.anyQuartz) {
-			OreDictionary.registerOre("stickAll", ModItems.quartz_stick);
-		}
-		if (ModVariables.anyNetherbrick) {
-			OreDictionary.registerOre("stickAll", ModItems.netherbrick_stick);
-		}
+		OreDictionary.registerOre("stickAll", ModItems.stone_stick);
+		OreDictionary.registerOre("stickAll", ModItems.netherrack_stick);
+		OreDictionary.registerOre("stickAll", ModItems.obsidian_stick);
+		OreDictionary.registerOre("stickAll", ModItems.quartz_stick);
+		OreDictionary.registerOre("stickAll", ModItems.netherbrick_stick);
+		OreDictionary.registerOre("stickAll", ModItems.ender_stick);
 
 		OreDictionary.registerOre("stickStone", ModItems.stone_stick);
 		OreDictionary.registerOre("rodStone", ModItems.stone_stick);
 		OreDictionary.registerOre("stoneRod", ModItems.stone_stick);
+
+		OreDictionary.registerOre("stickEnder", ModItems.ender_stick);
+		OreDictionary.registerOre("rodEnder", ModItems.ender_stick);
+		OreDictionary.registerOre("enderRod", ModItems.ender_stick);
 
 		OreDictionary.registerOre("stickObsidian", ModItems.obsidian_stick);
 		OreDictionary.registerOre("rodObsidian", ModItems.obsidian_stick);
