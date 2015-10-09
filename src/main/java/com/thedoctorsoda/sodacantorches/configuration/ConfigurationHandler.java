@@ -5,11 +5,11 @@ import java.io.File;
 import net.minecraftforge.common.config.Configuration;
 
 public class ConfigurationHandler {
-	public static int configVersion = 1;
+	public static int configVersion = 0;
 	/*
 	 * Config Versions:
 	 * 
-	 * 1 = 01.07.00
+	 * 1 = 01.07.00-PreRelease 2 = 01.07.00
 	 * 
 	 */
 
@@ -35,7 +35,7 @@ public class ConfigurationHandler {
 			configuration.load();
 
 			// Config Version
-			configVersion = configuration.get(Configuration.CATEGORY_GENERAL, "configVersion", 1, "Config File Version [DO NOT CHANGE!]").getInt();
+			configVersion = configuration.get(Configuration.CATEGORY_GENERAL, "configVersion", 2, "Config File Version [DO NOT CHANGE!]").getInt();
 
 			enableTorches = configuration.get(Configuration.CATEGORY_GENERAL, "enableTorches", true, "Enable Torches").getBoolean();
 			enableFlowerPots = configuration.get(Configuration.CATEGORY_GENERAL, "enableFlowerPotes", true, "Enable Flower Pots").getBoolean();

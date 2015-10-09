@@ -19,7 +19,7 @@ public class ItemGoldenWaterBucket extends ItemTDS {
 	public ItemGoldenWaterBucket() {
 		super();
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(Reference.MOD_ID + ":" + Names.GOLDENWATERBUCKET);
+		this.setTextureName(Reference.RESOURCE_ID + ":" + Names.GOLDENWATERBUCKET);
 		this.setMaxStackSize(1);
 	}
 

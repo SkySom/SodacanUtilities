@@ -15,9 +15,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
+@Mod(modid = Reference.RESOURCE_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
 public class SodacanTorches {
-	@Mod.Instance(Reference.MOD_ID)
+	@Mod.Instance(Reference.RESOURCE_ID)
 	public static SodacanTorches instance;
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)

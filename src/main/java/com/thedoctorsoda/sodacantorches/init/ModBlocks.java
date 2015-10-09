@@ -68,7 +68,7 @@ public final class ModBlocks {
 	public static final BlockFenceTDS obsidian_fence = (BlockFenceTDS) new BlockFenceTDS("minecraft:obsidian", Material.rock).setBlockName(Names.OBSIDIANFENCE).setResistance(6000F).setHardness(5F);
 	public static final BlockFenceTDS netherrack_fence = (BlockFenceTDS) new BlockFenceTDS("minecraft:netherrack", Material.rock).setBlockName(Names.NETHERRACKFENCE).setResistance(13).setHardness(3);
 	public static final BlockFenceTDS quartz_fence = (BlockFenceTDS) new BlockFenceTDS("minecraft:quartz_block_bottom", Material.rock).setBlockName(Names.QUARTZFENCE).setResistance(13).setHardness(3);
-	public static final BlockFenceTDS blaze_fence = (BlockFenceTDS) new BlockFenceTDS(Reference.MOD_ID + ":blaze_block", Material.rock).setBlockName(Names.BLAZEFENCE).setResistance(13).setHardness(3);
+	public static final BlockFenceTDS blaze_fence = (BlockFenceTDS) new BlockFenceTDS(Reference.RESOURCE_ID + ":blaze_block", Material.rock).setBlockName(Names.BLAZEFENCE).setResistance(13).setHardness(3);
 	public static final BlockFenceTDS netherbrick_fence = (BlockFenceTDS) new BlockFenceTDS("minecraft:nether_brick", Material.rock).setBlockName(Names.NETHERBRICKFENCE).setResistance(13).setHardness(3);
 	public static final BlockFenceTDS bedrock_fence = (BlockFenceTDS) new BlockFenceTDS("minecraft:bedrock", Material.rock).setBlockName(Names.BEDROCKFENCE).setResistance(18000000F).setHardness(-1);
 
@@ -80,8 +80,8 @@ public final class ModBlocks {
 	public static final BlockFenceGateTDS bedrock_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(ModBlocks.bedrock_fence).setBlockName(Names.BEDROCKFENCEGATE).setResistance(18000000F).setHardness(-1);
 	public static final BlockFenceGateTDS netherbrick_fence_gate = (BlockFenceGateTDS) new BlockFenceGateTDS(ModBlocks.netherbrick_fence).setBlockName(Names.NETHERBRICKFENCEGATE).setResistance(1).setHardness(3);
 
-	public static final BlockBarsTDS gold_bars = (BlockBarsTDS) new BlockBarsTDS(Names.GOLDBARS, Material.iron, false).setBlockName(Reference.MOD_ID + ":" + Names.GOLDBARS).setHardness(5).setResistance(30);
-	public static final BlockBarsTDS diamond_bars = (BlockBarsTDS) new BlockBarsTDS(Names.DIAMONDBARS, Material.iron, false).setBlockName(Reference.MOD_ID + ":" + Names.DIAMONDBARS).setHardness(5).setResistance(30);
+	public static final BlockBarsTDS gold_bars = (BlockBarsTDS) new BlockBarsTDS(Names.GOLDBARS, Material.iron, false).setBlockName(Reference.RESOURCE_ID + ":" + Names.GOLDBARS).setHardness(5).setResistance(30);
+	public static final BlockBarsTDS diamond_bars = (BlockBarsTDS) new BlockBarsTDS(Names.DIAMONDBARS, Material.iron, false).setBlockName(Reference.RESOURCE_ID + ":" + Names.DIAMONDBARS).setHardness(5).setResistance(30);
 
 	public static final BlockTDS logoblock = (BlockTDS) new BlockTDS().setBlockName("logoblock");
 

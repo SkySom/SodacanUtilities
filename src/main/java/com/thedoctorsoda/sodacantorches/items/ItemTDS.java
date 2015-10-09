@@ -18,13 +18,13 @@ public class ItemTDS extends Item {
 
 	@Override
 	public String getUnlocalizedName() {
-		return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":",
+		return String.format("item.%s%s", Reference.RESOURCE_ID.toLowerCase() + ":",
 				getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
 	}
 
 	@Override
 	public String getUnlocalizedName(ItemStack itemStack) {
-		return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":",
+		return String.format("item.%s%s", Reference.RESOURCE_ID.toLowerCase() + ":",
 				getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
 	}
 

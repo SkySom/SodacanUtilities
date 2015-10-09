@@ -33,7 +33,7 @@ public class BlockLanternTDS extends BlockGlass {
 
 	@Override
 	public void registerBlockIcons(IIconRegister reg) {
-		String name = Reference.MOD_ID + ":" + getUnwrappedUnlocalizedName(super.getUnlocalizedName());
+		String name = Reference.RESOURCE_ID + ":" + getUnwrappedUnlocalizedName(super.getUnlocalizedName());
 		this.icons[0] = reg.registerIcon(name + "_bottom");
 		this.icons[1] = reg.registerIcon(name + "_top");
 		this.icons[2] = reg.registerIcon(name + "_side");
@@ -49,7 +49,7 @@ public class BlockLanternTDS extends BlockGlass {
 
 	@Override
 	public String getUnlocalizedName() {
-		return String.format("tile.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+		return String.format("tile.%s%s", Reference.RESOURCE_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
 	}
 
 	protected String getUnwrappedUnlocalizedName(String unlocalizedName) {

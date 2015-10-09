@@ -8,7 +8,7 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockBarsTDS extends BlockPane {
 	public BlockBarsTDS(String textureName, Material material, boolean bool) {
-		super(Reference.MOD_ID + ":" + textureName + "_top", Reference.MOD_ID + ":" + textureName, material, bool);
+		super(Reference.RESOURCE_ID + ":" + textureName + "_top", Reference.RESOURCE_ID + ":" + textureName, material, bool);
 		this.setCreativeTab(CreativeTabs.tabDecorations);
 	}
 

@@ -18,7 +18,7 @@ public class ItemWaterEraser extends ItemTDS {
 	public ItemWaterEraser() {
 		super();
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(Reference.MOD_ID + ":" + Names.WATERERASER);
+		this.setTextureName(Reference.RESOURCE_ID + ":" + Names.WATERERASER);
 		this.setMaxStackSize(1);
 	}
 
