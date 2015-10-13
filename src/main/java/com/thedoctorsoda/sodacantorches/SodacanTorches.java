@@ -1,6 +1,5 @@
 package com.thedoctorsoda.sodacantorches;
 
-import com.thedoctorsoda.sodacantorches.client.RegisterRenders;
 import com.thedoctorsoda.sodacantorches.configuration.ConfigurationHandler;
 import com.thedoctorsoda.sodacantorches.init.ModBlocks;
 import com.thedoctorsoda.sodacantorches.init.ModItems;
@@ -36,7 +35,6 @@ public class SodacanTorches {
 	public void Init(FMLInitializationEvent event) {
 		ModRecipes.init();
 		ModOreDictionary.init();
-		RegisterRenders.init();
 
 		proxy.init(event);
 

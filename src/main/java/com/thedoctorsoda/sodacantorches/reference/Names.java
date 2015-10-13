@@ -28,6 +28,13 @@ public class Names {
 	public static final String BLAZELANTERN = "blaze_lantern";
 	public static final String BEDROCKLANTERN = "bedrock_lantern";
 
+	public static final String OBSIDIANBUTTON = "obsidian_lantern";
+	public static final String NETHERRACKBUTTON = "netherrack_lantern";
+	public static final String NETHERBRICKBUTTON = "netherbrick_lantern";
+	public static final String QUARTZBUTTON = "quartz_lantern";
+	public static final String BLAZEBUTTON = "blaze_lantern";
+	public static final String BEDROCKBUTTON = "bedrock_lantern";
+
 	public static final String WOODFLOWERPOT = "wood_flowerpot";
 	public static final String STONEFLOWERPOT = "stone_flowerpot";
 	public static final String OBSIDIANFLOWERPOT = "obsidian_flowerpot";

@@ -1,6 +1,7 @@
 package com.thedoctorsoda.sodacantorches.init;
 
 import com.thedoctorsoda.sodacantorches.blocks.BlockBarsTDS;
+import com.thedoctorsoda.sodacantorches.blocks.BlockButtonTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockDefaultLadderTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockEnderLadderTDS;
 import com.thedoctorsoda.sodacantorches.blocks.BlockFenceGateTDS;
@@ -44,6 +45,13 @@ public final class ModBlocks {
 	public static final BlockLeverTDS quartz_lever = (BlockLeverTDS) new BlockLeverTDS().setBlockName(Names.QUARTZLEVER);
 	public static final BlockLeverTDS bedrock_lever = (BlockLeverTDS) new BlockLeverTDS().setBlockName(Names.BEDROCKLEVER).setResistance(18000000F).setHardness(-1F);
 	public static final BlockLeverTDS blaze_lever = (BlockLeverTDS) new BlockLeverTDS().setBlockName(Names.BLAZELEVER);
+
+	public static final BlockButtonTDS obsidian_button = (BlockButtonTDS) new BlockButtonTDS().setBlockName(Names.OBSIDIANBUTTON).setResistance(6000F).setHardness(5F);
+	public static final BlockButtonTDS netherrack_button = (BlockButtonTDS) new BlockButtonTDS().setBlockName(Names.NETHERRACKBUTTON);
+	public static final BlockButtonTDS netherbrick_button = (BlockButtonTDS) new BlockButtonTDS().setBlockName(Names.NETHERBRICKBUTTON);
+	public static final BlockButtonTDS quartz_button = (BlockButtonTDS) new BlockButtonTDS().setBlockName(Names.QUARTZBUTTON);
+	public static final BlockButtonTDS bedrock_button = (BlockButtonTDS) new BlockButtonTDS().setBlockName(Names.BEDROCKBUTTON).setResistance(18000000F).setHardness(-1F);
+	public static final BlockButtonTDS blaze_button = (BlockButtonTDS) new BlockButtonTDS().setBlockName(Names.BLAZEBUTTON);
 
 	public static final BlockDefaultLadderTDS stone_ladder = (BlockDefaultLadderTDS) new BlockDefaultLadderTDS().setBlockName(Names.STONELADDER).setHardness(0.4F);
 	public static final BlockEnderLadderTDS ender_ladder = (BlockEnderLadderTDS) new BlockEnderLadderTDS().setBlockName(Names.ENDERLADDER).setHardness(1F);
