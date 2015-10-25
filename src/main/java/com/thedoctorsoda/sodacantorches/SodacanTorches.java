@@ -35,7 +35,6 @@ public class SodacanTorches {
 	public void Init(FMLInitializationEvent event) {
 		ModRecipes.init();
 		ModOreDictionary.init();
-
 		proxy.init(event);
 
 	}
