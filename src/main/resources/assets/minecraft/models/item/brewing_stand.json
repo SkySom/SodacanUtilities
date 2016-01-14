@@ -1,0 +1,21 @@
+{
+    "parent":"block/brewing_stand_empty",
+    "textures": {
+        
+    },
+    "display": {
+        "thirdperson": {
+            "rotation": [ 10, -45, 170 ],
+            "translation": [ 0, 0.2, -3.5 ],
+            "scale": [ 0.5, 0.5, 0.5 ]
+        },
+        "firstperson": {
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "gui": {
+            "translation": [ 1, 1.5, 0 ],
+            "scale": [ 1.3, 1.3, 1.3 ]
+        }
+    }
+}

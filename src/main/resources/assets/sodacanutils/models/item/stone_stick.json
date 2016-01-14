@@ -1,0 +1,6 @@
+{
+  "parent": "sodacanutils:item/standard_item",
+  "textures": {
+    "layer0": "sodacanutils:items/stone_stick"
+  }
+}

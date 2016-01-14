@@ -1,0 +1,21 @@
+{
+    "parent":"block/comparator_unlit",
+    "textures": {
+        
+    },
+    "display": {
+        "thirdperson": {
+            "rotation": [ 10, -45, 170 ],
+            "translation": [ -1, -0.7, -3 ],
+            "scale": [ 0.5, 0.5, 0.5 ]
+        },  
+        "firstperson": {
+            "translation": [ 0, 4, -2.75],
+            "scale": [ 1, 1, 1 ]
+        },
+        "gui": {
+            "translation": [ 0, 3.3, 0 ],
+            "scale": [ 1.1, 1.1, 1.1 ]
+        }
+    }
+}

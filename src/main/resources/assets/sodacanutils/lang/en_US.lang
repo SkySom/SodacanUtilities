@@ -1,0 +1,15 @@
+#Items
+item.sodacanutils:golden_water_bucket.name=Golden Water Bucket
+
+item.sodacanutils:stone_stick.name=Stone Stick
+item.sodacanutils:obsidian_stick.name=Obsidian Stick
+
+tile.torch.name=Wooden Torch
+tile.sodacanutils:stone_torch.name=Stone Torch
+tile.sodacanutils:obsidian_torch.name=Obsidian Torch
+
+tile.sodacanutils:wooden_lantern.name=Wooden Lantern
+tile.sodacanutils:stone_lantern.name=Stone Lantern
+tile.sodacanutils:obsidian_lantern.name=Obsidian Lantern
+tile.sodacanutils:quartz_lantern.name=Quartz Lantern
+tile.sodacanutils:netherbrick_lantern.name=Nether Brick Lantern

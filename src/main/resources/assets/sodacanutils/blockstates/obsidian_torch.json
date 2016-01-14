@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=up": { "model": "sodacanutils:obsidian_torch" },
+        "facing=east": { "model": "sodacanutils:obsidian_torch_wall" },
+        "facing=south": { "model": "sodacanutils:obsidian_torch_wall", "y": 90 },
+        "facing=west": { "model": "sodacanutils:obsidian_torch_wall", "y": 180 },
+        "facing=north": { "model": "sodacanutils:obsidian_torch_wall", "y": 270 }
+    }
+}
