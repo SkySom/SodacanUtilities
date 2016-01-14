@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=up": { "model": "sodacanutils:stone_torch" },
+        "facing=east": { "model": "sodacanutils:stone_torch_wall" },
+        "facing=south": { "model": "sodacanutils:stone_torch_wall", "y": 90 },
+        "facing=west": { "model": "sodacanutils:stone_torch_wall", "y": 180 },
+        "facing=north": { "model": "sodacanutils:stone_torch_wall", "y": 270 }
+    }
+}
